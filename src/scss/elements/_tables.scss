@@ -1,0 +1,13 @@
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+.wp-block-table.is-style-regular{
+	table, th, td{
+		border: solid 1px $refair_green_600;
+	}
+	td{
+		padding: 0.25rem 0.5rem;
+	}
+}

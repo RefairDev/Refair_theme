@@ -1,0 +1,225 @@
+.pre-footer-padding{
+	@media screen and (min-width:1550px){
+		display:none;
+	}
+	@media screen and (min-width:991px) and (max-width:1190px){
+		height:200px;
+	}
+	@media screen and (min-width:1191px){
+		height:100px;
+	}
+	height:110px;
+	position:relative;
+	.inner{
+		@include container;	
+		height:100%;
+		border-top: solid 1px $refair_green_400;
+		border-right: solid 1px $refair_green_400;
+		border-left: solid 1px $refair_green_400;
+	}
+}
+
+.site-footer{
+	position: relative;
+	background-color: black;
+
+
+	.bottom-insert{
+		position:absolute;
+		left:0;
+		height: 100px;
+		bottom: calc(100% - 1px);
+		width:100px;
+		@media screen and (min-width:992px){
+			height: 200px;
+			width:200px;
+		}
+		img{
+			transform: rotate(180deg);
+		}
+	}
+	.macaron{
+		position:absolute;
+
+		width: 50px;
+		@media screen and (min-width:992px){
+			height: 100px;
+			width: 100px;
+		}
+		&.entreprendre{
+			bottom: calc(100% + 50px);
+			left: 12px;
+			@media screen and (min-width:992px){
+				bottom: calc(100% + 75px);
+				left: 12px;
+			}
+		}
+		&.habiter{
+			bottom: 100%;
+			left: 50px;
+			@media screen and (min-width:992px){
+				left: 100px;
+			}
+		}
+	}
+	.site-footer-inner{
+		@include container;		
+		border-left: solid 1px white;
+		border-right: solid 1px white;
+
+		.footer-logo{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			flex-direction: row;
+			padding-top:1.5rem;
+			&>*{
+				flex: 0 0 140px;
+				width:140px;
+			}
+			
+		}
+		.newsletter{
+			border-bottom: solid 1px white;
+			
+			.newsletter-main-part{
+				
+				padding-top: 0.75rem;
+				display: grid;
+				justify-content: center;
+				@include all-lg{
+					margin-left:33%;
+					margin-right:33%;
+					width:34%;
+				}
+
+				.mailpoet_paragraph{
+					margin-bottom:0 !important;
+				}
+				.newsletter-prompt{
+					color: white;
+					text-align: center;
+					font-size: 1.3rem;
+					font-weight: 300;
+				}
+
+				.newsletter-actions{
+					text-align:center;
+					max-width: 350px;
+					.addr-newsletter{
+						background-color: transparent;
+						border-bottom: solid 1px white;
+						border-top: none;
+						border-left: none;
+						border-right: none;
+						border-radius: 0;
+						box-shadow: none;
+						color: white;
+						padding:0;
+						width: calc( 100% - 60px);
+						margin-right: 10px;
+						&:focus{
+							border-bottom: solid 2px white;
+							border-top: none;
+							border-left: none;
+							border-right: none;
+							border-radius: 0;
+							padding:0;
+							outline: none;
+						}
+					}
+					.newsletter-valid{
+						background-color: black;
+						border-radius: 0;
+						border: solid 1px white;
+						color: white;
+						margin-left: 5px;
+						margin:0px;
+						cursor: pointer;
+						padding: 0.5em 1em 0.5em;
+						&:focus, &:hover{
+							border: solid 1px white;
+							background-color: white;
+							border-radius: 0;
+							outline: none;
+							margin:0px;
+						}
+						i{
+							width:8px;
+							height:8px;
+							border-color: white;
+							margin: 0px;
+							&::before{
+								width:11px;
+								color: white;
+							}
+						}
+						&:focus, &:hover{
+							i{							
+								border-color: black;
+								&::before{
+									color: black;
+								}
+							}
+						}
+					}
+					.consent-cb-label{
+						margin-left: 7px;
+						color: white;
+						font-size: 0.8em;
+					}
+				}
+			}
+
+			.newsletter-short-mentions{
+				padding: 0 1.5rem 1.5rem;
+				font-size:0.8rem;
+				color:white;
+			}
+		}
+		.footer-links{
+			display: grid;
+			grid-template-columns: 50% 50%;
+
+			.left-part{
+				border-right: solid 1px white;
+			}
+
+			.part-title{
+				color: white;
+				border-bottom: solid 1px white;
+				@media screen and (min-width: 768px) {
+					font-size: 1.4rem;
+					padding: 0.5rem 3rem;
+				}
+				font-size: 1rem;
+				padding: 0.5rem 1rem;
+			}
+
+			.part-menu{
+				padding: 0.5rem 3rem;
+			}
+		}
+			
+		ul {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			vertical-align: middle;	
+			list-style: none;
+		}
+		li {	
+			margin: 0;
+			height: 100%;
+			vertical-align: middle;			
+			a{
+				color: white;
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+		}		
+		
+	}
+}

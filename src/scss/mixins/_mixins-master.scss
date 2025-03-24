@@ -1,0 +1,102 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+$sm:576px;
+$md:768px;
+$lg:992px;
+$xl:1200px;
+$xxl:1920px;
+
+@mixin all-sm{
+	@media (min-width: $sm) { @content; }
+}
+
+@mixin all-md{
+	@media (min-width: $md) { @content; }
+}
+
+@mixin all-lg{
+	@media (min-width: $lg) { @content; }
+}
+
+@mixin all-xl{
+	@media (min-width: $xl) { @content; }
+}
+
+@mixin all-xxl{
+	@media (min-width: $xxl) { @content; }
+}
+
+@mixin width-xs{
+	margin: 0 auto;
+	width: 100%;
+}
+
+@mixin width-sm{
+	margin: 0 auto;
+	width: 560px;
+}
+
+@mixin width-md{
+	margin: 0 auto;
+	width: 744px;
+}
+
+@mixin width-lg{
+	margin: 0 auto;
+	width: 960px;
+}
+
+@mixin width-xl{
+	margin: 0 auto;
+	width: 1140px;
+}
+@mixin width-xxl{
+	margin: 0 auto;
+	width: 1920px;
+}
+
+
+@mixin container{
+	@include width-xs;
+    
+    @include all-lg{
+        @include width-lg;
+    }
+    
+    @include all-xl{
+        @include width-xl;
+    }
+
+    @include all-xxl{
+        @include width-xl;
+    }
+}
+

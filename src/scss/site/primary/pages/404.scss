@@ -1,0 +1,35 @@
+.error404 {
+	.page-content{
+		padding:0;
+		display: grid;
+		grid-template-rows: min-content auto;
+		align-items:flex-start;
+		.prompt{
+			width:100%;
+			padding:1.5rem;
+			margin:0;
+		}
+
+		.two-columns{
+			align-items: stretch;
+			align-self: stretch;
+			width:100%;
+			.column{
+				@include all-md{
+					align-self: stretch;
+				}
+				@media screen and (max-width:991px){
+					&.b-right-green-400{
+						border-right:0;					
+					}
+				}
+			}
+		}
+
+		form.search-form{
+			margin-left:0;
+			justify-content: center;
+		}
+	}
+
+}

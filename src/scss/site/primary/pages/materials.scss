@@ -1,0 +1,262 @@
+$side-bar-width-desktop: 0;
+$side-bar-width-mobile: 0;
+.page-template-template-materials, .post-type-archive-product{
+
+
+    // .section-deposits{
+    //     border-bottom: solid 1px $refair_green_400;
+    //     .section-body{
+    //         position:relative;
+    //         overflow:hidden;
+    //         z-index:1;
+    //         #maplf-deposits{
+    //             height:600px;
+    //             width: calc( 100% - #{$side-bar-width-mobile});
+    //             -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25) inset;
+    //             box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.25) inset;
+    //             @media screen and (min-width:768px) {
+    //                 width: calc( 100% - #{$side-bar-width-desktop});
+    //             }
+    //             &.wide{
+    //                 width:100%;
+    //             }
+    //             .leaflet-container{
+    //                 height:600px;
+    //                 z-index:10;
+    //             }
+
+    //             .cluster-icon{
+    //                 width: 30px;
+    //                 height: 30px;
+    //                 border: solid 3px $refair_green_400;
+    //                 border-radius: 50%;
+    //                 background-color: white;
+    //                 font-weight: bold;
+    //                 text-align: center;
+    //                 position: relative;
+    //                 span{
+    //                     position: absolute;
+    //                     top:50%;
+    //                     left:50%;
+    //                     transform: translate(-50%,-50%);
+    //                     font-size: 18px;
+    //                 }
+    //             }
+    //         }
+    //         .deposits-sidebar{
+    //             z-index:12;
+    //             position: absolute;
+    //             right:0;
+    //             top:0;
+    //             bottom:0;
+    //             width: $side-bar-width-mobile;
+    //             -webkit-box-shadow: -3px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    //             box-shadow: -3px 0px 7px 0px rgba(0, 0, 0, 0.25);
+    //             @media screen and (min-width:768px) {
+    //                 width: $side-bar-width-desktop;
+    //             }
+    //             background-color: white;
+    //             transition: right 0.4s;
+    //             &.closed{
+    //                 right:-#{$side-bar-width-mobile};
+    //                 @media screen and (min-width:768px) {
+    //                     right:-#{$side-bar-width-desktop};
+    //                 }
+    //             }
+    //             .sidebar-close{
+    //                 .close-btn{
+    //                     cursor: pointer;
+    //                     line-height: 1.6rem;
+    //                     font-size: 2.5rem;
+    //                     font-weight: bold;
+    //                     padding: 0.5rem;
+    //                     position:absolute;
+    //                     right:100%;
+    //                     background-color: white;
+    //                 }
+    //             }
+    //             .deposits-sidebar-inner{
+    //                 position:relative;
+    //                 display:grid;
+    //                 height:100%;
+    //                 grid-template-rows: auto 100px;
+    //                 @media screen and (min-width:768px) {
+    //                     grid-template-rows: auto 60px;
+    //                 }
+    //                 .deposit-list{
+    //                     padding: 1rem 15px;
+    //                     align-self: stretch;
+    //                     overflow-y:auto;
+    //                     .deposit-card{
+    //                         display:grid;
+    //                         @media screen and (min-width:768px) {
+    //                             grid-template-rows: 3fr 1fr;
+    //                         }
+    //                         grid-template-rows: 6fr 1fr;
+    //                         grid-template-columns: 100%;
+    //                         margin-bottom: 1rem;
+    //                         border: solid 1px $refair_green_400;
+    //                         &.deposit-highlight{
+    //                             outline: solid 3px $refair_green_400;
+    //                         }
+    //                         .deposit-infos{
+    //                             display:grid;
+    //                             grid-template-columns: 1fr;
+    //                             @media screen and (min-width:768px) {
+    //                                 grid-template-columns: 50% 50%;
+    //                             }
+    //                             grid-template-rows: 1fr;
+    //                             .deposit-infos-left{
+    //                                 border-right: solid 1px $refair_green_400;
+    //                                 padding-top: 100%;
+    //                                 position: relative;
+    //                                 background-color: $refair_green_200;
+    //                                 overflow: hidden;
+    //                                 border-bottom: solid 1px $refair_green_400;
+    //                                 img{
+    //                                     transform: translate(-50%,-50%);
+    //                                     position:absolute;
+    //                                     left:50%;
+    //                                     top:50%;
+    //                                     height: 100%;
+    //                                     max-width:none;
+    //                                     &.default{
+    //                                         height: auto;
+    //                                         width:80%;
+    //                                     }
+    //                                 }
+    //                             }
+    //                             .deposit-infos-right{
+    //                                 display: grid;
+    //                                 grid-template-rows: 1fr 1fr 1fr;
+    //                                 grid-template-columns: 100%;
+    //                                 .deposit-name{
+    //                                     text-transform: uppercase;
+    //                                     border-bottom: solid 1px $refair_green_400;
+    //                                     display:flex;
+    //                                     span{
+    //                                         align-self: center;
+    //                                         padding-left: 1rem;
+    //                                         padding-right: 0.5rem;
+    //                                         overflow: hidden;
+    //                                         text-overflow: ellipsis;
+    //                                         max-width: 100%;
+    //                                         @include all-md{
+    //                                             white-space: nowrap;
+    //                                         }
+    //                                     }
+                                        
+    //                                 }
+    //                                 .deposit-location{
+    //                                     text-transform: uppercase;
+    //                                     border-bottom: solid 1px $refair_green_400;
+    //                                     display:flex;
+    //                                     max-width: 100%;
+    //                                     span{
+    //                                         align-self: center;
+    //                                         padding-left: 1rem;
+    //                                         padding-right: 0.5rem;
+    //                                         overflow: hidden;
+    //                                         text-overflow: ellipsis;
+    //                                         max-width: 100%;
+    //                                         @include all-md{
+    //                                             white-space: nowrap;
+    //                                         }
+    //                                     }
+    //                                 }
+    //                                 .deposit-availability{
+    //                                     background-color: $refair_green_400;
+    //                                     color: white;
+    //                                     text-transform: uppercase;
+    //                                     display:flex;
+    //                                     max-width: 100%;
+    //                                     span{
+    //                                         align-self: center;
+    //                                         padding-left: 1rem;
+    //                                     }
+    //                                 }
+    //                             }
+                            
+    //                             }
+    //                             .deposit-link-link{
+    //                                 display:flex;
+    //                                 justify-content: flex-end;
+    //                                 line-height:0;
+    //                                 margin-right:1rem;
+    //                                 width:100%;
+    //                                 padding-right :0.5rem;
+    //                                 transition: background-color 0.4s;
+    //                                 i{
+    //                                     align-self: center;
+    //                                     display: inline-block;
+    //                                     display:inline-block;
+    //                                     transition: color 0.4s border-color 0.4s;
+    //                                 }
+    //                                 &:hover{
+    //                                     background-color: $refair_green_700;
+    //                                     i{
+    //                                         color: white;
+    //                                         border-color: white;
+    //                                     }
+    //                                 }
+    //                             }
+                        
+    //                     }
+    //                 }
+    //                 .deposits-legend{
+    //                     .legend{
+    //                         display:grid;
+    //                         justify-items: center;
+    //                         @media screen and (min-width:768px) {
+    //                             grid-template-columns: 1fr 1fr 1fr;
+    //                         }
+    //                         grid-template-columns: 1fr;
+    //                         padding: 15px;
+    //                         .legend-item{
+    //                             &:last-child {padding-right: 0;}
+    //                             padding: 0 0.5rem 0 0;
+    //                             display: flex;
+    //                             align-content: center;
+    //                             .pastille{
+    //                                 display: inline-block;
+    //                                 height:20px;
+    //                                 width: 20px;
+    //                                 margin-right: 0.5rem;
+    //                                 &.progress{background-image:url("images/pending.png");background-size: 20px 20px;background-clip: content-box;}
+    //                                 &.finished{background-image:url("images/finished.png");background-size: 20px 20px;background-clip: content-box;}
+    //                                 &.all{ border-radius: 50%;border: solid 2px $refair_green_400;  background-color: white;}
+    //                             }
+    //                         }
+    //                     }
+    //                 }
+                    
+
+
+    //             }
+    //        }
+    //     }
+    // }
+
+    .section-materials{
+        border-bottom: solid 1px $refair_green_400;
+    }
+
+    .section-title-wrapper{
+        //border-top: solid 1px $refair_green_400;
+        border-bottom: solid 1px $refair_green_400;
+        .section-title{
+            @include container;
+            padding: 1rem;
+            border-left: solid 1px $refair_green_400;
+            border-right: solid 1px $refair_green_400;
+        }
+    }
+
+    .section-body{
+        // @include container;
+        // border-left: solid 1px $refair_green_400;
+        // border-right: solid 1px $refair_green_400;
+    }
+    
+
+}

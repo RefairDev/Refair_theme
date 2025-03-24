@@ -1,0 +1,89 @@
+$refair_black: black;
+$refair_white: white;
+// $refair_green_100: #cff7e3;
+// $refair_green_300: #A0CDB7;
+// $refair_green_400: #367857;
+// $refair_green_600: #30644A;
+// $refair_green_700: #24513b;
+// $refair_green_900: #0a1811;
+// $refair_green_200: desaturate(lighten($refair_green_400,25%), 23%); //#87a697
+
+$refair_green_100: #a6bec2;
+$refair_green_200: #799da3;
+$refair_green_300: #4d7d85;
+$refair_green_400: #205c66;
+$refair_green_500: #1b4d55;
+$refair_green_600: #153d44;
+$refair_green_700: #102e33;
+$refair_green_800: #0b1f22;
+$refair_green_900: #050f11;
+
+
+// $refair_red_200: #FFC6BF;
+// $refair_red_400: #783D36;
+// $refair_red_700: #452F2D;
+
+$refair_red_100: #fad2ca;
+$refair_red_200: #f4a695;
+$refair_red_300: #ef795f;
+$refair_red_400: #E94C2A;
+$refair_red_500: #c23f23;
+$refair_red_600: #9b331c;
+$refair_red_700: #752615;
+$refair_red_800: #4e190e;
+$refair_red_900: #270d07;
+
+
+
+
+
+$refair_orange_200: #DED9BD;
+$refair_orange_400: #786F36;
+$refair_orange_700: #45422D;
+
+$refair_blue_200: #C0BDDE;
+$refair_blue_400: #3E3678;
+$refair_blue_700: #302D45;
+
+$color__background-body: #fff;
+$color__background-screen: #fff;
+$color__background-hr: $refair_green_400;
+$color__background-button: desaturate($refair_green_400,30%);
+$color__background-pre: $refair_green_400;
+$color__background-ins: $refair_green_400;
+
+$color__text-screen: $refair_green_400;
+$color__text-input: $refair_green_400;
+$color__text-input-focus: $refair_green_400;
+$color__link: $refair_red_400;
+$color__link-visited: $refair_red_400;
+$color__link-hover: $refair_red_500;
+$color__text-main: $refair_green_400;
+
+$color__border-button: $refair_green_400 $refair_green_400 $refair_green_400;
+$color__border-button-hover: $refair_green_400 $refair_green_400 $refair_green_400;
+$color__border-button-focus: $refair_green_400 $refair_green_400 $refair_green_400;
+$color__border-input: $refair_green_400;
+$color__border-abbr: $refair_green_400;
+
+:root{
+	--refair_green_100: #{$refair_green_100};
+	--refair_green_200: #{$refair_green_200};
+	--refair_green_300: #{$refair_green_300};
+	--refair_green_400: #{$refair_green_400};
+	--refair_green_500: #{$refair_green_500};
+	--refair_green_600: #{$refair_green_600};
+	--refair_green_700: #{$refair_green_700};
+	--refair_green_800: #{$refair_green_800};
+	--refair_green_900: #{$refair_green_900};
+
+	--refair_red_100: #{$refair_red_100};
+	--refair_red_200: #{$refair_red_200};
+	--refair_red_300: #{$refair_red_300};
+	--refair_red_400: #{$refair_red_400};
+	--refair_red_500: #{$refair_red_500};
+	--refair_red_600: #{$refair_red_600};
+	--refair_red_700: #{$refair_red_700};
+	--refair_red_800: #{$refair_red_800};
+	--refair_red_900: #{$refair_red_900};
+}

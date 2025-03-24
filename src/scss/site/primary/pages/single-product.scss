@@ -1,0 +1,360 @@
+
+.woocommerce #content div.product div.summary, 
+.woocommerce div.product div.summary, 
+.woocommerce-page #content div.product div.summary, 
+.woocommerce-page div.product div.summary{
+    display:block;
+    float: none;
+    width: 100%;
+
+}
+
+
+.woocommerce div.product{
+   
+    .referer-section-wrapper{
+        .referer-section{
+            @include container;
+            .referer-link{
+                color: white;                		
+                [class*="icono"] {                       
+                    color: white;
+                }
+            }
+        }
+
+    }
+
+    .manual-action-btn-wrapper{        
+        transform: translateY(-40%);
+        .manual-close.collapsed{
+            background-color: $refair_green_600;            
+        }
+    }
+    .product-cat-wrapper{
+        border-bottom: solid 1px $refair_green_400;
+        border-top: solid 1px $refair_green_400;
+    }
+    .product-cat{
+        border-left: solid 1px $refair_green_400;
+        border-right: solid 1px $refair_green_400;
+        text-transform: uppercase;
+        padding: 1.5rem 2rem;
+        font-size: 1.75rem;
+    }
+    .section-summary{
+        @include container;
+        @media screen and (min-width:768px) {
+            border-left: solid 1px $refair_green_400;
+            border-right: solid 1px $refair_green_400;
+        }
+        display: grid;
+        grid-template-columns: 100%;
+        @media screen and (min-width:768px) {
+            grid-template-columns: 50% 50%;    
+        }
+        border-bottom: solid 1px $refair_green_400;
+        .summary-picture{
+            grid-row:1 / 2;
+            @media screen and (min-width:768px) {
+                grid-column: 2 / 3;
+            }
+        }
+        div.summary.entry-summary{
+            grid-row:2 / 3;
+            @media screen and (min-width:768px) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+            @media screen and (min-width:768px) {
+                border-right: solid 1px $refair_green_400;
+            }
+            margin-bottom:0;
+            margin-top:0;
+            .sub-summary-block{
+                display: grid;
+                justify-content: stretch; 
+                align-content: stretch;
+                grid-template-columns: 60% 40%;
+                grid-template-rows: auto auto auto auto;
+                height:100%;
+                
+                .product_title {
+                    grid-column: 1 / 3;
+                    grid-row: 1 / 2;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    padding-top: 0.67em;
+                    padding-bottom: 0.67em;
+                    margin:0;
+                    border-bottom: solid 1px $refair_green_400;
+                }
+                h2{
+                    background-color: $refair_green_400;
+                    display:inline-block;
+                    color: white;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    font-size: 1rem;                        
+                    padding: 0.25rem;
+                    @media screen and (min-width: 992px){
+                        font-size: 1.25rem;                        
+                        padding: 0.5rem;
+                    }
+                    @media screen and (min-width:768px) {
+                        font-size: 1.1rem;                        
+                        padding: 0.4rem;
+                    }
+                }
+                .row.left{   
+                    grid-column: 1 / 2;
+                    border-right: solid 1px $refair_green_400;
+                    padding: 0.5rem 1rem ;
+                }
+                .row.right{
+                    grid-column: 2 / 3;
+                    padding: 0.5rem 1rem;
+                }
+                .row.left, .row.right {
+                    &:nth-of-type(3n +1){
+                        grid-row: 2 / 3;
+                        border-bottom: solid 1px $refair_green_400;
+                    }
+                    &:nth-of-type(3n +2){
+                        grid-row: 3 / 4;
+                        border-bottom: solid 1px $refair_green_400;
+                    }
+                    &:nth-of-type(3n +3){
+                        grid-row: 4 / 5;
+                    }
+                }
+                
+                .right-1-wrapper{
+                    text-align:center;
+
+                }
+                .right-2-wrapper,.right-3-wrapper{
+                    display:flex;
+                    justify-content: center;
+                    height: 100%;
+                    flex-wrap:wrap;
+                    font-size: 1.3rem;
+                    *{
+                        flex:1 1 100%;
+                        align-self:center;
+                        text-align:center;
+                    }
+
+                }
+                .right-3-wrapper{
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    p{
+                        margin: 0;
+                    }
+                    .qty-count{
+                        font-size:2.5rem;
+                        line-height:2.5rem;
+                    }
+                    *{
+                        flex:1 1 100%;
+                        align-self:center;
+                        text-align:center;
+                    }
+                }
+
+                .left-2-wrapper{
+                    h2{
+                        margin: 0.5rem 0;
+                    }
+                    div{
+                        padding-left:0.5rem;
+                    }
+                }
+
+                .left-3-wrapper{
+                    display: grid;
+                    grid-template-rows: 30% 70%;
+                    height:100%;
+                    .location{
+                        display:flex;
+                        span{
+                            align-self: center;                            
+                        }
+                    }
+                    .availability{
+                        background-color: $refair_green_400;
+                        color: white;
+                        margin: 0 -1rem -0.5rem;
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                        display:flex;
+                        span{
+                            align-self: center;    
+                            font-size: 1.4rem;                        
+                        }
+                    }
+                }
+
+                .cart-row{
+                    border-top: solid 1px $refair_green_400;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    grid-column: 1 / 3;
+                    padding: 0.75rem;
+                    @media screen and (min-width: 992px){
+                        padding: 2rem;
+                    }
+                    .cart{
+                        margin-bottom: 0;
+                        .single_add_to_cart_button {
+                            transition: background-color 0.4s;
+                            @include all-lg{
+                                font-size: 1.25rem;                                
+                            }
+                        }
+                            
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    .variations-section{
+        @media screen and (min-width:768px) {
+            border-left: solid 1px $refair_green_400;
+            border-right: solid 1px $refair_green_400;
+        }
+        padding: 2rem 1.5rem 4rem;
+        @include container;
+        .variations-title{
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .variations-table{
+            border-left: solid 2px $refair_green_400;
+            border-right: solid 2px $refair_green_400;
+            border-bottom: solid 1px $refair_green_400;
+            border-top: solid 1px $refair_green_400;
+            .variation-row{
+                display:grid;
+                grid-auto-flow: row;
+                //grid-template-columns: 100% 100%;
+                @include all-lg{                    
+                    grid-template-columns: auto 250px;
+                }
+                padding: 15px;
+                border-bottom: solid 1px $refair_green_400;
+                border-top: solid 1px $refair_green_400;
+                .variation-elts{
+                    display:grid;
+                    padding-right: 15px;
+                    
+                    grid-template-columns: 100%;
+                    @include all-md{                    
+                        grid-template-columns: 50% 50%;
+                    }
+                    @include all-xl{                    
+                        grid-template-columns: 43% 12% 26% 9% 10%;
+                    }
+                    label{
+                        display: none
+                    }
+                }
+
+                @media screen and (max-width:1199px) {
+                    &.header{
+                      display:none;
+                    }
+                    .variation-elts{
+                        text-align: left;
+                        .variation-elt{
+                            margin-bottom: 0.5rem;
+                            label{
+                                font-weight:bold;
+                                display:block;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .variation-elt{
+                display:inline-block;
+                padding:0 15px;        
+                vertical-align: middle;
+                align-self:center;
+                @include all-xl{
+                    &.center{
+                        text-align:center;
+                    }
+                }
+            }
+            .variation-elt-qty{
+                text-align:center;
+                border-radius: 0;
+                border-color: $refair_green_400;
+                border-width: 2px;
+                width:50px;
+                padding: .75rem .5rem;
+                line-height:20px;
+                font-size: 1rem;
+                &:focus, &:active{
+                    outline-color: $refair_green_400;
+                    border-color: $refair_green_400;
+                    border-radius: 0;
+                }
+            }
+            
+            @include all-xl{
+                .variation-designation{}
+                .variation-dimensions,.variation-material,.variation-stock,.variation-condition {text-align:center;}
+            }
+            .add-to-cart{
+                background-color: $refair_green_400;
+                padding: 0.75rem 0.5rem;
+                
+                text-transform: uppercase;
+                cursor: pointer;
+                text-align: center;
+                
+                border-radius: 0;
+                border-color: $refair_green_400;
+                border-width: 2px;
+                line-height:20px;
+                font-weight: bold;
+                vertical-align: middle;
+                span.text{
+                    vertical-align: middle;
+                    display:inline-block;
+                    line-height: 2px;
+                    color: white;
+                    font-size: 0.8rem;
+                }
+                span.plus{
+                    vertical-align: middle;
+                    display:inline-block;
+                    background-color: white;
+                    border-radius: 50%;
+                    color: $refair_green_700;
+                    width:20px;
+                    height:20px;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+    .padding-block{
+        padding-top: 4rem;
+        @include container;
+        border-left: solid 1px $refair_green_400;
+        border-right: solid 1px $refair_green_400;
+    }
+

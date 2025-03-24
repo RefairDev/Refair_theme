@@ -1,0 +1,77 @@
+{
+  "name": "refair_theme",
+  "version": "1.0.0",
+  "description": "Wordpress Theme for the REFAIR Website",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Vias",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "9.4.3",
+    "browser-sync": "2.26.3",
+    "postcss-sort-media-queries": "3.2.3",
+    "cssnano": "4.1.7",
+    "del": "3.0.0",
+    "gulp": "4.0.2",
+    "gulp-noop": "1.0.1",
+    "gulp-composer": "0.4.5",
+    "gulp-concat": "2.6.1",
+    "gulp-debug": "4.0.0",
+    "gulp-deporder": "1.1.0",
+    "gulp-imagemin": "4.1.0",
+    "gulp-newer": "1.4.0",
+    "postcss": "8.2.4",
+    "gulp-postcss": "9.0.0",
+    "gulp-sass": "5.1.0",
+    "gulp-strip-debug": "3.0.0",
+    "gulp-uglify": "3.0.1",
+    "gulp-zip": "6.1.0",
+    "postcss-assets": "5.0.0",
+    "gulp-babel": "8.0.0",
+    "@babel/core": "7.24.7",
+    "@babel/preset-env": "7.24.7",
+    "@babel/preset-react": "7.24.7",
+    "@babel/plugin-transform-nullish-coalescing-operator": "7.24.7",
+    "babel-loader": "9.1.3",
+    "css-loader": "7.1.2",
+    "style-loader": "4.0.0",
+    "file-loader": "6.2.0",
+    "postcss-loader": "8.1.1",
+    "webpack-stream": "7.0.0",
+    "sass": "1.77.5"
+  },
+  "dependencies": {
+    "@splidejs/splide": "2.4.21",
+    "@turf/centroid": "6.5.0",
+    "bootstrap": "4.5.3",
+    "chart.js": "3.9.1",
+    "chartjs-plugin-datalabels": "2.1.0",
+    "fabric": "4.6.0",
+    "html-react-parser": "1.4.8",
+    "jquery": "3.4.1",
+    "leaflet": "1.7.1",
+    "leaflet.markercluster": "1.5.3",
+    "leaflet-gesture-handling": "1.2.2",
+    "popper.js": "1.16.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-leaflet": "3.2.5",
+    "react-notifications-component": "3.4.1",
+    "react-scroll": "1.8.5",
+    "react-select": "5.2.2",
+    "lodash": "4.17.21"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
+  "jshintConfig": {
+    "esversion": 6
+  }
+}

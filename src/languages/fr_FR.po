@@ -1,0 +1,926 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: refair\n"
+"POT-Creation-Date: 2022-03-10 17:40+0100\n"
+"PO-Revision-Date: 2022-04-11 12:10+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Poedit-Basepath: ../php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__;esc_html_e;esc_html__;_nx;esc_html_x\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:18
+msgid "Page not found"
+msgstr "Page introuvable"
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Il semble qu'il n'y ait rien par ici, essayez peut-être un des liens ci-"
+"dessous ou une recherche ?"
+
+#: 404.php:32
+msgid "Desposits and materials"
+msgstr "Gisements et Matériaux"
+
+#: 404.php:33
+msgid "All deposits"
+msgstr "Tous les gisements"
+
+#: 404.php:33
+msgid "Here"
+msgstr "Ici"
+
+#: 404.php:34
+msgid "Lastest Deposits"
+msgstr "Les Derniers Gisements"
+
+#: 404.php:53
+msgid "No deposit found"
+msgstr "Aucun Gisement trouvé"
+
+#: cfg/theme-init.php:6
+msgid "Manuel"
+msgstr "Manuel"
+
+#: cfg/theme-init.php:8 cfg/theme-init.php:18
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr ""
+"Les Widgets de cette zone apparaîtront dans tous les Articles et toutes les "
+"pages."
+
+#: cfg/theme-init.php:16
+msgid "Pied de Page"
+msgstr "Pied de page"
+
+#: cfg/theme-setup.php:80
+msgid "Principal"
+msgstr "Principal"
+
+#: cfg/theme-setup.php:81
+msgid "Pied de page gauche"
+msgstr "Pied de page gauche"
+
+#: cfg/theme-setup.php:82
+msgid "Pied de page droit"
+msgstr "Pied de page droit"
+
+#: cfg/theme-widgets.php:10
+msgid "Sidebar"
+msgstr "Barre latérale"
+
+#: cfg/theme-widgets.php:12 cfg/theme-widgets.php:22
+msgid "Add widgets here."
+msgstr "Ajouter des widgets ici."
+
+#: cfg/theme-widgets.php:20
+msgid "Footer"
+msgstr "Pied de page"
+
+#: comments.php:35
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "Un commentaire sur &ldquo;%1$s&rdquo;"
+
+#: comments.php:41
+#, php-format
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgstr "%1$s commentaire sur &ldquo;%2$s&rdquo;"
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Les commentaries sont clos."
+
+#: functions.php:158
+msgid "It appears the class-wp-bootstrap-navwalker.php file may be missing."
+msgstr ""
+"Il semble que le ficheir class-wp-bootstrap-navwalker.php serait manquant."
+
+#: functions.php:227 functions.php:236 functions.php:269
+msgid "here"
+msgstr "ici"
+
+#: functions.php:285 woocommerce/emails/customer-invoice.php:63
+msgid ""
+"Vous pouvez télécharger votre manifestation d'intérêt ( liste récapitulative "
+"+ fiches matériaux ) depuis votre compte > catégories mes \"listes\""
+msgstr ""
+"Vous pouvez télécharger votre manifestation d'intérêt ( liste récapitulative "
+"+ fiches matériaux ) depuis votre compte > catégories mes \"listes\""
+
+#: header.php:31
+msgid "Skip to content"
+msgstr "Passer au contenu"
+
+#: header.php:94 header.php:124
+msgid "Login / Register"
+msgstr "Connexion"
+
+#: header.php:95 header.php:125
+msgid "My Account"
+msgstr "Mon compte"
+
+#: inc/attachment_meta_edit.php:8
+msgid "Attachment Extra Details"
+msgstr "Les détails supplémentaire de l'attachement"
+
+#: inc/attachment_meta_edit.php:24
+msgid "Show in resources"
+msgstr "Montrer dans les ressources"
+
+#: inc/class-wp-bootstrap-navwalker.php:376
+msgid "Add a menu"
+msgstr "Ajouter un menu"
+
+#: inc/core/Agent/Agent.php:328
+msgid "Search "
+msgstr "Rechercher "
+
+#: inc/core/Agent/Agent.php:329
+msgid "Popular "
+msgstr "Populaire "
+
+#: inc/core/Agent/Agent.php:330
+msgid "All "
+msgstr "Tous "
+
+#: inc/core/Agent/Agent.php:333
+msgid "Edit "
+msgstr "Éditer "
+
+#: inc/core/Agent/Agent.php:334
+msgid "Update "
+msgstr "Mettre à jour "
+
+#: inc/core/Agent/Agent.php:335 inc/core/Agent/Agent.php:376
+msgid "Add New "
+msgstr "Ajouter un nouveau "
+
+#: inc/core/Agent/Agent.php:336
+msgid "New "
+msgstr "Nouveau "
+
+#: inc/core/Agent/Agent.php:336
+msgid " Name"
+msgstr " Nom"
+
+#: inc/core/Agent/Agent.php:337
+msgid "Separate writers with commas"
+msgstr "Séparer les auteurs avec des virgules"
+
+#: inc/core/Agent/Agent.php:338
+msgid "Add or remove"
+msgstr "Ajouter ou retirer"
+
+#: inc/core/Agent/Agent.php:339
+msgid "Choose from the most used "
+msgstr "Choisir parmi les plus utilisés "
+
+#: inc/core/Agent/Agent.php:340
+msgid "No "
+msgstr "Non "
+
+#: inc/core/Agent/Agent.php:340
+msgid " found."
+msgstr " trouvé."
+
+#: inc/core/Agent/Agent.php:375
+msgid "Add New"
+msgstr "Ajouter un nouveau"
+
+#: inc/core/Agent/Agent.php:377 inc/core/Agent/Agent.php:378
+msgid "Edit"
+msgstr "Éditer"
+
+#: inc/core/Agent/Agent.php:379
+msgid "New"
+msgstr "Nouveau"
+
+#: inc/core/Agent/Agent.php:380 inc/core/Agent/Agent.php:381
+msgid "View"
+msgstr "Visualiser"
+
+#: inc/core/Agent/Agent.php:382
+msgid "Search"
+msgstr "Rechercher"
+
+#: inc/core/Agent/Agent.php:383
+#, php-format
+msgid "No %s found"
+msgstr "Aucun %s trouvé"
+
+#: inc/core/Agent/Agent.php:384
+#, php-format
+msgid "No %s found in Trash"
+msgstr "Aucun %s trouvé dans la corbeille"
+
+#: inc/core/Pixelscodex/Metas/GroupMeta.php:336
+#: inc/core/Pixelscodex/Metas/TextImageMeta.php:159
+#: inc/core/Pixelscodex/Metas/Views/ImageMetaView.php:34
+#: inc/core/Pixelscodex/Metas/Views/ImageMetaView.php:63
+#: inc/core/Pixelscodex/Metas/Views/ImageMetaView.php:135
+msgid "Browse"
+msgstr "Parcourir"
+
+#: inc/core/Pixelscodex/Metas/GroupMeta.php:427
+#: inc/core/Pixelscodex/Metas/MapMeta.php:51
+msgid "Aucune carte disponible"
+msgstr "Aucune carte disponible"
+
+#: inc/core/Pixelscodex/Metas/VideoMeta.php:54
+msgid "My custom content (HTML/PHP)"
+msgstr "Mon contenu personnalisé (HTML/PHP)"
+
+#: inc/core/Pixelscodex/Metas/Views/ImageMetaView.php:76
+msgid "Remove"
+msgstr "Supprimer"
+
+#: inc/core/Pixelscodex/Settings/ExtensibleSetting.php:29
+msgid "Numbers of fields"
+msgstr "Nombre de champs"
+
+#: inc/core/Pixelscodex/Settings/ExtensibleSetting.php:44
+msgid "field"
+msgstr "champs"
+
+#: inc/core/Pixelscodex/Settings/ImageSetting.php:33
+msgid "Image to display"
+msgstr "Image à afficher"
+
+#: inc/core/Pixelscodex/Settings/ImageSetting.php:43
+msgid "Legend or url"
+msgstr "Légende ou url"
+
+#: inc/core/Pixelscodex/Settings/MapSetting.php:40
+msgid "Aucune carte"
+msgstr "Aucune carte"
+
+#: inc/core/Pixelscodex/Settings/MapSetting.php:44
+msgid "Carte à afficher"
+msgstr "Carte à afficher"
+
+#: inc/core/Pixelscodex/Settings/RadioSetting.php:23
+msgid "True"
+msgstr "Vrai"
+
+#: inc/core/Pixelscodex/Settings/RadioSetting.php:24
+msgid "False"
+msgstr "Faux"
+
+#: inc/template-tags.php:29
+#, php-format
+msgid "Posted on %s"
+msgstr "Publié sur %s"
+
+#: inc/template-tags.php:45
+#, php-format
+msgid "by %s"
+msgstr "par %s"
+
+#: inc/template-tags.php:62 inc/template-tags.php:69
+msgid ", "
+msgstr ", "
+
+#: inc/template-tags.php:65
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Posté dans %1$s"
+
+#: inc/template-tags.php:72
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Taggé %1$s"
+
+#: inc/template-tags.php:80
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+"Laisser un commentaire<span class=\"screen-reader-text\"> sur %s</span>"
+
+#: inc/template-tags.php:93
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Éditer <span class=\"screen-reader-text\">%s</span>"
+
+#: search.php:24
+#, php-format
+msgid "Résultats de recherche pour: %s"
+msgstr "Résultats de recherche pour: %s"
+
+#: template-newsletter-confirmation.php:33
+#: template-parts/content-deposit.php:38 template-parts/content.php:84
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Continuer la lecture <span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: template-parts/content-deposit.php:49 template-parts/content-page.php:24
+#: template-parts/content.php:95
+msgid "Pages:"
+msgstr "Pages:"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Aucun résultat"
+
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier article<a href=\"%1$s\">Commencer ici</a>."
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, mais rien ne correspond aux termes recherchés. S'il vous plait "
+"réessyer avec différents mots clés."
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Il semble que nous ne pouvons trouver ce que vous cherchez. Peut être une "
+"recherche pourrait aider."
+
+#: template-parts/content.php:18
+msgid "news"
+msgstr "actualités"
+
+#: woocommerce/cart/cart-empty.php:35
+msgid "Return to deposits"
+msgstr "Retour aux gisements"
+
+#: woocommerce/cart/cart.php:30 woocommerce/order/order-details.php:51
+msgid "Matériau"
+msgstr "Matériau"
+
+#: woocommerce/cart/cart.php:31 woocommerce/emails/email-order-details.php:43
+msgid "Quantity"
+msgstr "Quantité"
+
+#: woocommerce/cart/cart.php:54
+msgid "Remove this item"
+msgstr "Enlever cet élément"
+
+#: woocommerce/cart/cart.php:90
+msgid "Available on backorder"
+msgstr "Disponible sur liste"
+
+#: woocommerce/cart/cart.php:131
+msgid "Coupon:"
+msgstr "Code promo :"
+
+#: woocommerce/cart/cart.php:136
+msgid "Mettre à jour la liste"
+msgstr "Mettre à jour la liste"
+
+#: woocommerce/cart/mini-cart.php:83
+msgid "No products in the cart."
+msgstr "Votre liste est vide."
+
+#: woocommerce/cart/proceed-to-checkout-button.php:26
+msgid "Valider la liste"
+msgstr "Valider la liste"
+
+#: woocommerce/checkout/cart-errors.php:21
+msgid ""
+"Il y a des erreurs avec les matériaux de votre liste. S'il vous plait, "
+"retournez à votre liste et corrigez les problèmes avant validation"
+msgstr ""
+"Il y a des erreurs avec les matériaux de votre liste. S'il vous plait, "
+"retournez à votre liste et corrigez les problèmes avant validation"
+
+#: woocommerce/checkout/cart-errors.php:25
+msgid "Retourner à la liste"
+msgstr "Retourner à la liste"
+
+#: woocommerce/checkout/form-billing.php:24
+#: woocommerce/checkout/form-billing.php:28
+msgid "Détails d'enregistrement"
+msgstr "Détails d'enregistrement"
+
+#: woocommerce/checkout/form-billing.php:53
+msgid "Create an account?"
+msgstr "Créer un compte ?"
+
+#: woocommerce/checkout/form-checkout.php:26
+msgid "You must be logged in to checkout."
+msgstr "Vous devez être identifié pour lister."
+
+#: woocommerce/checkout/form-checkout.php:54
+msgid "Votre liste"
+msgstr "Votre liste"
+
+#: woocommerce/checkout/form-coupon.php:26
+msgid "Have a coupon?"
+msgstr "Avez-vous un code promo ?"
+
+#: woocommerce/checkout/form-coupon.php:26
+msgid "Click here to enter your code"
+msgstr "Cliquez ici pour saisir votre code"
+
+#: woocommerce/checkout/form-coupon.php:31
+msgid "If you have a coupon code, please apply it below."
+msgstr "Si vous possédez un code promo, appliquez-le ci-après."
+
+#: woocommerce/checkout/form-coupon.php:38
+msgid "Apply coupon"
+msgstr "Appliquer le code promo"
+
+#: woocommerce/checkout/form-login.php:26
+msgid "Returning customer?"
+msgstr "Déjà client ?"
+
+#: woocommerce/checkout/form-login.php:26
+msgid "Click here to login"
+msgstr "Cliquez ici pour vous connecter"
+
+#: woocommerce/checkout/form-login.php:32
+msgid ""
+"If you have shopped with us before, please enter your details below. If you "
+"are a new customer, please proceed to the Billing section."
+msgstr ""
+"Si vous avez déjà commandé avec nous auparavant, veuillez saisir vos "
+"coordonnées ci-dessous. Si vous êtes un nouveau client, veuillez renseigner "
+"la section facturation."
+
+#: woocommerce/checkout/form-pay.php:27
+msgid "Product"
+msgstr "Produit"
+
+#: woocommerce/checkout/form-pay.php:28
+msgid "Qty"
+msgstr "Qté"
+
+#: woocommerce/checkout/form-pay.php:29
+msgid "Totals"
+msgstr "Totaux"
+
+#: woocommerce/checkout/form-pay.php:79
+msgid ""
+"Sorry, it seems that there are no available payment methods for your "
+"location. Please contact us if you require assistance or wish to make "
+"alternate arrangements."
+msgstr ""
+"Désolé, il semble qu&rsquo;il n&rsquo;y ai pas de moyens de paiement "
+"disponibles pour votre localisation. Veuillez nous contactez si vous avez "
+"besoin d&rsquo;assistance ou si vous désirez mettre en place une alternative."
+
+#: woocommerce/checkout/form-shipping.php:26
+msgid "Ship to a different address?"
+msgstr "Expédier à une adresse différente ?"
+
+#: woocommerce/checkout/form-shipping.php:57
+msgid "Additional information"
+msgstr "Informations complémentaires"
+
+#: woocommerce/checkout/order-receipt.php:25
+#: woocommerce/checkout/thankyou.php:47
+msgid "Order number:"
+msgstr "Numéro de liste :"
+
+#: woocommerce/checkout/order-receipt.php:29
+#: woocommerce/checkout/thankyou.php:52
+msgid "Date:"
+msgstr "Date :"
+
+#: woocommerce/checkout/payment.php:33
+msgid ""
+"Sorry, it seems that there are no available payment methods for your state. "
+"Please contact us if you require assistance or wish to make alternate "
+"arrangements."
+msgstr ""
+"Désolé, il semble qu’il n’y ait pas de moyen de paiement disponible pour "
+"votre état. Veuillez nous contacter si vous avez besoin d’aide ou si vous "
+"désirez mettre en place une alternative."
+
+#: woocommerce/checkout/payment.php:33
+msgid "Please fill in your details above to see available payment methods."
+msgstr ""
+"Veuillez saisir une adresse de livraison ci-dessus pour voir les moyens de "
+"paiement disponibles."
+
+#: woocommerce/checkout/payment.php:42
+#, php-format
+msgid ""
+"Since your browser does not support JavaScript, or it is disabled, please "
+"ensure you click the %1$sUpdate Totals%2$s button before placing your order. "
+"You may be charged more than the amount stated above if you fail to do so."
+msgstr ""
+"Votre navigateur ne supporte pas JavaScript ou bien il est désactivé, "
+"assurez vous de cliquer sur le bouton %1$sMise à Jour Totaux%2$s avant de "
+"passer votre liste. Vous pouvez être facturé plus que le montant indiqué ci-"
+"dessus si vous omettez de le faire."
+
+#: woocommerce/checkout/payment.php:44
+msgid "Update totals"
+msgstr "Mise à jour des totaux"
+
+#: woocommerce/checkout/review-order.php:23
+msgid "Materiaux"
+msgstr "Matériaux"
+
+#: woocommerce/checkout/thankyou.php:31
+msgid ""
+"Unfortunately your order cannot be processed as the originating bank/"
+"merchant has declined your transaction. Please attempt your purchase again."
+msgstr ""
+"Malheureusement votre liste ne peut être traitée car la banque ou le "
+"commerçant d’origine a refusé votre transaction. Veuillez effectuer une "
+"nouvelle tentative d’achat."
+
+#: woocommerce/checkout/thankyou.php:34
+msgid "Pay"
+msgstr "Payer"
+
+#: woocommerce/checkout/thankyou.php:36
+msgid "My account"
+msgstr "Mon compte"
+
+#: woocommerce/checkout/thankyou.php:42 woocommerce/checkout/thankyou.php:72
+msgid "Thank you. Your order has been received."
+msgstr "Merci. Votre liste a été reçue."
+
+#: woocommerce/checkout/thankyou.php:58
+msgid "Email:"
+msgstr "E-mail :"
+
+#: woocommerce/emails/admin-cancelled-order.php:28
+#: woocommerce/emails/plain/admin-cancelled-order.php:25
+#, php-format
+msgid ""
+"Notification to let you know &mdash; order #%1$s belonging to %2$s has been "
+"cancelled:"
+msgstr ""
+"Notification pour vous informer &mdash; la manifestation d'intérêt #%1$s "
+"appartenant à %2$s a été annulée :"
+
+#: woocommerce/emails/admin-failed-order.php:28
+#: woocommerce/emails/plain/admin-failed-order.php:25
+#, php-format
+msgid "Payment for order #%1$s from %2$s has failed. The order was as follows:"
+msgstr ""
+"Le paiement pour la commande #%1$s de %2$s a échoué. La commande était la "
+"suivante:"
+
+#: woocommerce/emails/admin-new-order.php:26
+#: woocommerce/emails/plain/admin-new-order.php:25
+#, php-format
+msgid "You’ve received the following order from %s:"
+msgstr "Vous avez reçu la manifestation d'intérêt suivante de %s :"
+
+#: woocommerce/emails/customer-completed-order.php:28
+#: woocommerce/emails/customer-invoice.php:30
+#: woocommerce/emails/customer-new-account.php:23
+#: woocommerce/emails/customer-note.php:28
+#: woocommerce/emails/customer-on-hold-order.php:26
+#: woocommerce/emails/customer-processing-order.php:28
+#: woocommerce/emails/customer-refunded-order.php:26
+#: woocommerce/emails/customer-reset-password.php:27
+#: woocommerce/emails/plain/customer-completed-order.php:25
+#: woocommerce/emails/plain/customer-invoice.php:25
+#: woocommerce/emails/plain/customer-new-account.php:25
+#: woocommerce/emails/plain/customer-note.php:25
+#: woocommerce/emails/plain/customer-on-hold-order.php:25
+#: woocommerce/emails/plain/customer-processing-order.php:25
+#: woocommerce/emails/plain/customer-refunded-order.php:25
+#: woocommerce/emails/plain/customer-reset-password.php:25
+#, php-format
+msgid "Hi %s,"
+msgstr "Bonjour %s,"
+
+#: woocommerce/emails/customer-completed-order.php:29
+#: woocommerce/emails/plain/customer-completed-order.php:27
+msgid "We have finished processing your order."
+msgstr "Nous avons terminé de traiter votre manifestation d'intérêt."
+
+#: woocommerce/emails/customer-invoice.php:38
+#: woocommerce/emails/plain/customer-invoice.php:31
+#, php-format
+msgid ""
+"An order has been created for you on %1$s. Your invoice is below, with a "
+"link to make payment when you’re ready: %2$s"
+msgstr ""
+"Une manifestation d'intérêt a été créée pour vous sur %1$s. Votre résumé est "
+"ci-dessous, avec un lien pour effectuer le paiement lorsque vous êtes prêt : "
+"%2$s"
+
+#: woocommerce/emails/customer-invoice.php:46
+msgid "Pay for this order"
+msgstr "Valider cette manifestation d'intérêt"
+
+#: woocommerce/emails/customer-invoice.php:55
+#: woocommerce/emails/plain/customer-invoice.php:39
+#, php-format
+msgid "Here are the details of your order placed on %s:"
+msgstr "Voici les détails de votre manifestation d'intérêt présentée le %s :"
+
+#: woocommerce/emails/customer-new-account.php:25
+#: woocommerce/emails/plain/customer-new-account.php:27
+#, php-format
+msgid ""
+"Thanks for creating an account on %1$s. Your username is %2$s. You can "
+"access your account area to view orders, change your password, and more at: "
+"%3$s"
+msgstr ""
+"Merci d’avoir créé un compte sur %1$s. Votre identifiant est %2$s. Vous "
+"pouvez accéder à l’espace membre de votre compte pour visualiser vos listes, "
+"modifier votre mot de passe, et plus encore ici : %3$s"
+
+#: woocommerce/emails/customer-new-account.php:28
+msgid "Click here to set your new password."
+msgstr "Cliquer ici pour définir un nouveau mot de passe."
+
+#: woocommerce/emails/customer-note.php:29
+#: woocommerce/emails/plain/customer-note.php:26
+msgid "The following note has been added to your order:"
+msgstr "La note suivante a été ajoutée à votre liste :"
+
+#: woocommerce/emails/customer-note.php:33
+#: woocommerce/emails/plain/customer-note.php:34
+msgid "As a reminder, here are your order details:"
+msgstr "Pour rappel, voici les détails de votre liste :"
+
+#: woocommerce/emails/customer-on-hold-order.php:27
+#: woocommerce/emails/plain/customer-on-hold-order.php:26
+msgid ""
+"Thanks for your order. It’s on-hold until we confirm that payment has been "
+"received. In the meantime, here’s a reminder of what you ordered:"
+msgstr ""
+"Merci pour votre liste. Elle est en attente jusqu’à ce que nous confirmions "
+"sa prise en compte. En attendant, voici un rappel de votre liste :"
+
+#: woocommerce/emails/customer-processing-order.php:30
+#: woocommerce/emails/plain/customer-processing-order.php:27
+#, php-format
+msgid ""
+"Just to let you know &mdash; we've received your order #%s, and it is now "
+"being processed:"
+msgstr ""
+"Pour information, nous avons reçu votre liste n°%s, elle est maintenant en "
+"cours de traitement."
+
+#: woocommerce/emails/customer-refunded-order.php:32
+#: woocommerce/emails/plain/customer-refunded-order.php:28
+#, php-format
+msgid ""
+"Your order on %s has been partially refunded. There are more details below "
+"for your reference:"
+msgstr ""
+"Votre liste sur %s a été partiellement annulée. Plus d’information ci-"
+"dessous :"
+
+#: woocommerce/emails/customer-refunded-order.php:35
+#: woocommerce/emails/plain/customer-refunded-order.php:31
+#, php-format
+msgid ""
+"Your order on %s has been refunded. There are more details below for your "
+"reference:"
+msgstr "Votre liste sur %s a été remboursée. Plus d’information ci-dessous :"
+
+#: woocommerce/emails/customer-reset-password.php:29
+#: woocommerce/emails/plain/customer-reset-password.php:27
+#, php-format
+msgid "Someone has requested a new password for the following account on %s:"
+msgstr ""
+"Un utilisateur a demandé un nouveau mot de passe pour le compte suivant sur "
+"%s :"
+
+#: woocommerce/emails/customer-reset-password.php:31
+#: woocommerce/emails/plain/customer-reset-password.php:29
+#, php-format
+msgid "Username: %s"
+msgstr "Identifiant : %s"
+
+#: woocommerce/emails/customer-reset-password.php:32
+#: woocommerce/emails/plain/customer-reset-password.php:30
+msgid ""
+"If you didn't make this request, just ignore this email. If you'd like to "
+"proceed:"
+msgstr ""
+"Si vous n’êtes pas l’auteur de cette demande, ignorez simplement cet e-mail. "
+"Pour continuer :"
+
+#: woocommerce/emails/customer-reset-password.php:35
+msgid "Click here to reset your password"
+msgstr "Cliquez ici pour réinitialiser votre mot de passe"
+
+#: woocommerce/emails/email-addresses.php:29
+msgid "Correspondance address"
+msgstr "Adresse de correspondance"
+
+#: woocommerce/emails/email-addresses.php:32
+#: woocommerce/order/order-details-customer.php:34
+#: woocommerce/order/order-details-customer.php:52
+msgid "N/A"
+msgstr "ND"
+
+#: woocommerce/emails/email-addresses.php:43
+#: woocommerce/emails/plain/email-addresses.php:35
+#: woocommerce/order/order-details-customer.php:50
+msgid "Shipping address"
+msgstr "Adresse de livraison"
+
+#: woocommerce/emails/email-customer-details.php:24
+#: woocommerce/emails/plain/email-customer-details.php:22
+msgid "Customer details"
+msgstr "Détails de l'utilisateur"
+
+#: woocommerce/emails/email-downloads.php:22
+#: woocommerce/emails/plain/email-downloads.php:20
+msgid "Downloads"
+msgstr "Téléchargemetns"
+
+#: woocommerce/emails/email-downloads.php:58
+#: woocommerce/emails/plain/email-downloads.php:40
+msgid "Never"
+msgstr "Jamais"
+
+#: woocommerce/emails/email-order-details.php:34
+#, php-format
+msgid "[Expression of interest #%s]"
+msgstr "[Manifestation d'intérêt #%s]"
+
+#: woocommerce/emails/email-order-details.php:42
+msgid "Material"
+msgstr "Matériau"
+
+#: woocommerce/emails/plain/customer-new-account.php:32
+msgid "To set your password, visit the following address: "
+msgstr "Pour initialiser votre mot de passe, visitez l’adresse suivante: "
+
+#: woocommerce/emails/plain/email-addresses.php:20
+msgid "Billing address"
+msgstr "Adresse de correspondance"
+
+#: woocommerce/emails/plain/email-order-details.php:23
+#, php-format
+msgid "[Expression of interest #%1$s] (%2$s)"
+msgstr "[Manifestation d'intérêt #%1$s] (%2$s)"
+
+#: woocommerce/emails/plain/email-order-details.php:38
+#: woocommerce/order/order-details.php:83
+msgid "Note:"
+msgstr "Note :"
+
+#: woocommerce/emails/plain/email-order-details.php:43
+#, php-format
+msgid "View order: %s"
+msgstr "Voir la manifestation d'intérêt: %s"
+
+#: woocommerce/hooks.php:9
+msgid "Mes listes"
+msgstr "Mes listes"
+
+#: woocommerce/hooks.php:16 woocommerce/hooks.php:23
+#: woocommerce/myaccount/my-orders.php:14
+msgid "Liste"
+msgstr "Liste"
+
+#: woocommerce/hooks.php:23
+msgid "Order"
+msgstr "Commande"
+
+#: woocommerce/hooks.php:134
+msgid "Voir ma liste"
+msgstr "Voir ma liste"
+
+#: woocommerce/hooks.php:137
+msgid "a été ajouté à votre liste"
+msgstr "a été ajouté à votre liste"
+
+#: woocommerce/hooks.php:201
+#, php-format
+msgid "I've read and accept the <a href='%s'>Terms of service</a>"
+msgstr ""
+"J'ai lu et accepte les <a href='%s'>Conditions générales d'utilisation</a>"
+
+#: woocommerce/hooks.php:213
+msgid "Terms of service consent is required!"
+msgstr "L'acceptation des conditions générales d'utilisation est requise!"
+
+#: woocommerce/hooks_single-product.php:64
+msgid "Remarques"
+msgstr "Remarques"
+
+#: woocommerce/hooks_single-product.php:120
+msgid "Matériaux"
+msgstr "Matériaux"
+
+#: woocommerce/hooks_single-product.php:121
+msgid "dimensions"
+msgstr "dimensions"
+
+#: woocommerce/hooks_single-product.php:209
+msgid "Variations"
+msgstr "Variations"
+
+#: woocommerce/hooks_single-product.php:246
+#: woocommerce/hooks_single-product.php:280
+#: woocommerce/hooks_single-product.php:285
+msgid "Ajouter à ma liste"
+msgstr "Ajouter à ma liste"
+
+#: woocommerce/myaccount/dashboard.php:35
+#, php-format
+msgid "Hello %1$s (not %1$s? <a href=\"%2$s\">Log out</a>)"
+msgstr "Bonjour %1$s (vous n’êtes pas %1$s ? <a href=\"%2$s\">Déconnexion</a>)"
+
+#: woocommerce/myaccount/dashboard.php:45
+#: woocommerce/myaccount/dashboard.php:48
+#, php-format
+msgid ""
+"À partir de ce compte vous pouvez accéder à <a href=\"%1$s\">vos listes de "
+"matériaux sélectionnés</a>, gérer <a href=\"%2$s\">vos informations</a>, et "
+"<a href=\"%3$s\">éditer votre mot de passe et les détails de votre compte</"
+"a>."
+msgstr ""
+"À partir de ce compte vous pouvez accéder à <a href=\"%1$s\">vos listes de "
+"matériaux sélectionnés</a>, gérer <a href=\"%2$s\">vos informations</a>, et "
+"<a href=\"%3$s\">éditer votre mot de passe et les détails de votre compte</"
+"a>."
+
+#: woocommerce/myaccount/my-orders.php:15
+msgid "Date"
+msgstr "Date"
+
+#: woocommerce/myaccount/my-orders.php:16
+msgid "Status"
+msgstr "État"
+
+#: woocommerce/myaccount/my-orders.php:36
+msgid "Liste récente"
+msgstr "Liste récente"
+
+#: woocommerce/myaccount/orders.php:89
+msgid "Previous"
+msgstr "Précédent"
+
+#: woocommerce/myaccount/orders.php:93
+msgid "Next"
+msgstr "Suivant"
+
+#: woocommerce/myaccount/orders.php:100
+msgid "Browse products"
+msgstr "Parcourir les produits"
+
+#: woocommerce/myaccount/orders.php:101
+msgid "No order has been made yet."
+msgstr "Aucune liste n&rsquo;a encore été passée."
+
+#: woocommerce/myaccount/view-order.php:28
+#, php-format
+msgid "Liste #%1$s créée le %2$s et est actuellement %3$s."
+msgstr "Liste #%1$s créée le %2$s et est actuellement %3$s."
+
+#: woocommerce/myaccount/view-order.php:37
+msgid "Actualités de la liste"
+msgstr "Actualités de la liste"
+
+#: woocommerce/myaccount/view-order.php:43
+msgid "l jS \\o\\f F Y, h:ia"
+msgstr "l j F Y, h:i"
+
+#: woocommerce/order/order-details-customer.php:31
+msgid "Adresses de contact"
+msgstr "Adresses de contact"
+
+#: woocommerce/order/order-details-item.php:60
+msgid "Download sheet"
+msgstr "Télécharger la fiche"
+
+#: woocommerce/order/order-details.php:45
+msgid "Détails de la liste"
+msgstr "Détails de la liste"
+
+#: woocommerce/order/order-details.php:52
+msgid "Actions"
+msgstr "Actions"
+
+#~ msgid "Total:"
+#~ msgstr "Total :"
+
+#~ msgid "Payment method:"
+#~ msgstr "Moyen de paiement :"
+
+#~ msgid "Oops! That page can&rsquo;t be found."
+#~ msgstr "Oups ! Cette page est introuvable."
+
+#~ msgid "Most Used Categories"
+#~ msgstr "Catégories les plus utilisées"
+
+#, php-format
+#~ msgid "Try looking in the monthly archives. %1$s"
+#~ msgstr "Tentez de regarder dans les archives mensuelles. %1$s"

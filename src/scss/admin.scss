@@ -1,0 +1,222 @@
+
+
+ .extensible-block{
+
+	margin-bottom: 16px;
+	.extensible-block-structure{
+		width:100%;
+		td{
+			vertical-align: top;
+			&.extension-content{
+				border: #444 1px solid;
+				border-radius: 2px;
+				padding: 1rem;
+			}
+		}
+	}
+ }
+
+ 
+.meta-title-bar{
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    background-color: #fafafa;
+    border-top: solid #ddd 1px;
+    border-left: solid #ddd 1px;
+    border-right: solid #ddd 1px;
+    h3{
+        padding: 0 1rem;
+    }
+}
+
+.meta-content{
+    padding: 1rem;
+    border: solid #ddd 1px;
+    margin-bottom: 0.5rem;
+}
+
+.extensible-meta-item {
+        display:grid;
+        grid-template-columns: min-content min-content auto;
+        grid-template-rows: min-content auto;
+}
+
+.extensible-meta-item > * {
+        border-right: 1px #ddd solid;
+        border-top: 1px #ddd solid;
+}
+
+.extensible-meta-item .extensible-meta-item-handle {
+    grid-area: 1 / 1 / 2 / 2;
+    transition-delay: grid-area 0.6s;
+    border-bottom: none;
+    &-padding{
+        grid-area: 2 / 1 / 3 / 2;
+        border-top: none;
+    }
+}
+
+.extensible-meta-item .extensible-meta-item-number{
+    grid-area: 1 / 2 / 2 / 3;
+    transition-delay: grid-area 0.6s;
+    border-bottom: none;
+    &-padding{
+        grid-area: 2 / 2 / 3 / 3;
+        border-top: none;
+    }
+}
+
+.extensible-meta-item .extensible-meta-item-menu-bar {
+    grid-area: 1 / 3 / 2 / 4;
+}
+.extensible-meta-item .extensible-meta-item-content {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.extensible-meta-item .extensible-meta-item-number, 
+.extensible-meta-item .extensible-meta-item-handle {
+    background-color: #eee;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    &-padding{
+        background-color: #eee;
+    }
+}
+
+.extensible-meta-item .extensible-meta-item-handle {
+    cursor:grab;
+}
+.extensible-meta-item.sortable-chosen .extensible-meta-item-handle, .grabbing, .extensible-meta-item:active {
+    cursor:grabbing !important;
+}
+.extensible-meta-item .extensible-meta-item-content {
+    overflow:hidden;
+    transition: max-height 0.4s, padding 0.4s;
+    max-height: 10000px;
+    padding: 1rem;
+    margin-bottom: 0;
+    border: none;
+    &.collapsed{
+        max-height:0;
+        padding: 0 1rem;
+    }    
+}
+
+
+.extensible-meta-item-menu-bar{
+    background-color: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    .reduced-value{
+        vertical-align: middle;
+    }
+}
+.extensible-meta-item-actions{
+    display:flex;
+    align-items: center;
+}
+
+.collapse-indicator, .remove-indicator {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:hover span::before{
+        color: black;
+    }
+    span::before{
+        color: #787c82;
+        display: inline-block;
+        font: normal 20px/1 dashicons;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-decoration: none;
+    }
+}
+
+.remove-indicator{
+    font-size:1.5rem;
+    vertical-align: middle;
+    color: #787c82;
+    &:hover{
+        color: black;
+    }
+}
+
+.extensible-meta-item.collapsed .collapse-indicator span::before {
+    content:"\f140";
+}
+.extensible-meta-item .collapse-indicator span::before {
+    content:"\f142";
+}
+
+.extensible-meta-item .extensible-meta-item-menu-bar{
+    justify-content: end;
+    .reduced-value{
+        display:none;
+    }
+}
+.extensible-meta-item.collapsed .extensible-meta-item-menu-bar{
+    justify-content: space-between;
+    .reduced-value{
+        display: flex;
+    }
+}
+
+.reduced-value{
+    display:flex;
+    align-items: center;
+    column-gap: 1rem;
+    padding-left:0.5rem;
+}
+img.reduced-value-thumbnail{
+    border: solid 1px #ddd;
+    height:2rem;
+}
+
+
+.burger-icon span {
+    display: block;
+    width: 15px;
+    height: 3px;
+    background-color: #ccc;
+    margin: 2px 0;
+    border-radius: 1px;
+  }
+
+  .meta-edit-block{
+    padding: 0.5rem 1rem 0.5rem;
+  }
+
+  .meta-input-controls{
+    @media screen and (min-width: 922px) {
+        display: grid;
+        grid-template-columns: max-content auto;
+        gap: 0.5rem;
+        label{
+            margin: 0;
+            text-align: right;
+            line-height:30px;
+            vertical-align: middle;
+        }
+    }
+    label{
+        margin: 1rem 0 0.5rem;
+        text-align: left;
+    }
+    span{
+        line-height:30px;
+        vertical-align: middle;
+    }
+
+    img{
+        background-color: #eee;
+        background-image: linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%), linear-gradient(45deg, #ddd 25%, transparent 25%, transparent 75%, #ddd 75%);
+        background-size: 25px 25px;
+        background-position: 0 0, 12px 12px;
+    }
+  }
