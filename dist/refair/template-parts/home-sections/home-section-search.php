@@ -13,7 +13,7 @@
 			foreach ( $section['search_types'] as $vector ) {
 				?>
 			<div class="vector">
-				<a href="<?php echo esc_url( $vector['page_link'] ); ?>">
+				<a href="<?php echo $vector['page_link']; ?>">
 					<div class="vector-preview">
 						<div class="big-letter b-green">
 							<div class="sub-mask left"></div>	

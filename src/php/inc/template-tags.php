@@ -185,7 +185,7 @@ if ( ! function_exists( 'get_mask_letter' ) ) {
 			echo wp_kses(
 				$svg,
 				array_merge(
-					wp_kses_allowed_html( 'strip' ),
+					wp_kses_allowed_html( 'post' ),
 					array(
 						'svg'   => array(
 							'id'          => array(),

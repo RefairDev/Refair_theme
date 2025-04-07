@@ -98,14 +98,14 @@ class Extensible_Meta_View extends Meta_View {
 					</div>
 					<div class="extensible-meta-item-number-padding"></div>
 					<div class="extensible-meta-item-menu-bar">
-						<span class="reduced-value"><?php echo wp_kses( apply_filters( 'theme_render_reduced_view_' . $child_meta_arr['type'], '', $child_meta_arr, $meta_value ), wp_kses_allowed_html( 'strip' ) ); ?></span>
+						<span class="reduced-value"><?php echo wp_kses( apply_filters( 'theme_render_reduced_view_' . $child_meta_arr['type'], '', $child_meta_arr, $meta_value ), wp_kses_allowed_html( 'post' ) ); ?></span>
 						<div class="extensible-meta-item-actions">
 							<button type="button" class="collapse-indicator" onclick="toggleHeightItem(this)"><span></span></button>
 							<button type="button" class="remove-indicator" onclick="removeItem(this)" ><span>&times;</span></button>
 						</div>
 					</div>
 					<div class="extensible-meta-item-content meta-content collapsed">
-						<?php echo wp_kses( apply_filters( 'theme_meta_renderview_' . $child_meta_arr['type'], $view_content, $child_meta_arr, $meta_value ), wp_kses_allowed_html( 'strip' ) ); ?>
+						<?php echo apply_filters( 'theme_meta_renderview_' . $child_meta_arr['type'], $view_content, $child_meta_arr, $meta_value ); ?>
 					</div>
 				</div>
 				<?php
