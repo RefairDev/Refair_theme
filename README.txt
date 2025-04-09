@@ -17,8 +17,14 @@ This website integrate graphic designs of REFAIR project.
 There are several templated pages, archive template managing of deposits post type, providers post type, materials ( Woocommerce products ).
 
 
-== Installation ==
+== Usage ==
 
+* prerequisite
+Wordpress: >6.7.2
+Woocommerce: >6.5.2
+Refair_plugin: last main branch commit
+
+* Install
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload Theme and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
