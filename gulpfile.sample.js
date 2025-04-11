@@ -460,7 +460,6 @@ function watch(cb){
   // page changes
   gulp.watch(php.src, gulp.series(browsersyncManagement,phpCopy));
   gulp.watch(dir.src + 'geojson/**/*.json', gulp.series(browsersyncManagement, geojsonCopy));
-  gulp.watch(PCLMt.src, gulp.series(browsersyncManagement, PCLMtCopy));  
 
   gulp.watch(vendors.src, gulp.series(browsersyncManagement, fabricCopy, chartCopy, dataLabelCopy, others ));
   

@@ -71,11 +71,11 @@ if ( array_key_exists( 'logo_bdr', $all_metas ) ) {
 							'description' => $layer['description'],
 						);
 					}
-					echo wp_kses_post( $hover_triggers );
+					echo $hover_triggers;
 					?>
 					<img  class='axono-foreground' src="<?php echo esc_url( $section['main_infographic']['url'] ); ?>" alt="">
 					<?php
-					echo wp_kses_post( $layers );
+					echo $layers;
 					?>
 					<img id="axonometrie" class='axo-background' src="<?php echo esc_url( $section['main_infographic_background']['url'] ); ?>" alt="">
 
