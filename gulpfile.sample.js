@@ -219,7 +219,8 @@ function geojsonCopy () {
 
 function vendors_lib(cb){
 	composer({
-		"working-dir": destFolder
+		"working-dir": destFolder,
+    "async": false
   });
   cb();
 };
@@ -479,7 +480,7 @@ function watch(cb){
 };
 
 function zipAll(){
-  return gulp.src(dir.dist+'/*')
+  return gulp.src(dir.dist+'/**')
 		.pipe(gulpzip( themeName + '.zip' ) )
 		.pipe(gulp.dest('dist'))
 }
@@ -492,12 +493,12 @@ exports.cleanDev = gulp.series(
 
 //run distrib tasks
 exports.dist = gulp.series(
-	setProdEnv,
+  setProdEnv,
   startupWrapper,
   gulp.parallel(fontsCopy, phpCopy, geojsonCopy),
   gulp.parallel(imagesCopy,screenshot,languagesCopy),
   gulp.parallel(cssTask, cssTaskAdmin),
-  gulp.parallel(jsonCopy, vendors_lib, fabricCopy, chartCopy, dataLabelCopy, others),
+  gulp.parallel(gulp.series(jsonCopy, vendors_lib), fabricCopy, chartCopy, dataLabelCopy, others),
   gulp.parallel(js_admin_prod, js_public_prod, webpackging),
   zipAll
   );
@@ -509,7 +510,7 @@ exports.default = gulp.series(
   gulp.parallel(fontsCopy, phpCopy, geojsonCopy),
   gulp.parallel(imagesCopy,screenshot,languagesCopy),
   gulp.parallel(cssTask, cssTaskAdmin),
-  gulp.parallel(jsonCopy, vendors_lib, fabricCopy, chartCopy, dataLabelCopy, others),
+  gulp.parallel(gulp.series(jsonCopy, vendors_lib), fabricCopy, chartCopy, dataLabelCopy, others),
   gulp.parallel(js_admin, js_public, webpackging),
   gulp.parallel(watch, browsersyncManagement)
   );
