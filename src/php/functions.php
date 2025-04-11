@@ -43,21 +43,26 @@ $agent->add_footer_script( 'scripts-admin', 'scripts_admin.js', 'admin', array( 
 $agent->add_header_script( 'bundle-public', 'bundle.js', 'public', array() );
 
 
+$script_properties = array(
+	'img_url'                => get_stylesheet_directory_uri() . '/images',
+	'ajax_url'               => admin_url( 'admin-ajax.php' ),
+	'rest_url'               => get_rest_url( null, 'wp/v2/' ),
+	'woo_rest_url'           => get_rest_url( null, 'wc-api/v3/' ),
+	'rest_materials'         => get_rest_url( null, 'materials/get/' ),
+	'rest_materials_filters' => get_rest_url( null, 'materials/filters/' ),
+	'rest_deposits'          => get_rest_url( null, 'wp/v2/deposit/' ),
+	'rest_locations'         => get_rest_url( null, 'locations/get/' ),
+);
+
+if ( false !== get_theme_mod( 'custom_logo' ) ) {
+	$script_properties['default_thumbnail'] = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0];
+
+}
 
 $agent->set_script_properties(
 	'scripts-public',
 	'admin_objects',
-	array(
-		'img_url'                => get_stylesheet_directory_uri() . '/images',
-		'ajax_url'               => admin_url( 'admin-ajax.php' ),
-		'rest_url'               => get_rest_url( null, 'wp/v2/' ),
-		'woo_rest_url'           => get_rest_url( null, 'wc-api/v3/' ),
-		'rest_materials'         => get_rest_url( null, 'materials/get/' ),
-		'rest_materials_filters' => get_rest_url( null, 'materials/filters/' ),
-		'rest_deposits'          => get_rest_url( null, 'wp/v2/deposit/' ),
-		'rest_locations'         => get_rest_url( null, 'locations/get/' ),
-		'default_thumbnail'      => wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' )[0],
-	)
+	$script_properties
 );
 
 $json         = file_get_contents( get_template_directory() . '/geojson/IRIS_COM_centroids.json' );

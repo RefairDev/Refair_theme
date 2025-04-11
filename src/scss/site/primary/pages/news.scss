@@ -10,6 +10,8 @@
 		}
 		@include all-lg{
 			gap: 0 0.5%;
+			display:grid;
+			
 		}
 		.news-item{
 			flex-grow: 0;

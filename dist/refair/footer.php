@@ -43,7 +43,7 @@ $logo_alt       = get_bloginfo( 'name' );
 				}
 				?>
 				</div>
-				<div class="newsletter-short-mentions"><?php echo esc_html( get_theme_mod( 'mentioncourtenewsletter' ) ); ?></div>
+				<div class="newsletter-short-mentions"><?php echo  get_theme_mod( 'mentioncourtenewsletter' ) ; ?></div>
 			</div>
 			<div class="footer-links">
 				<div class="left-part">
