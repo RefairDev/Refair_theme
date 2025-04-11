@@ -495,6 +495,7 @@ exports.cleanDev = gulp.series(
 exports.dist = gulp.series(
   setProdEnv,
   startupWrapper,
+  clean,
   gulp.parallel(fontsCopy, phpCopy, geojsonCopy),
   gulp.parallel(imagesCopy,screenshot,languagesCopy),
   gulp.parallel(cssTask, cssTaskAdmin),
