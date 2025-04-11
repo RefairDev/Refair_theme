@@ -1433,7 +1433,6 @@ class Agent {
 		$this->require( $this->core_dir . '/Pixelscodex/Metas/Utils' );
 
 		require_once __DIR__ . '/class-agent-meta-factory.php';
-		require_once __DIR__ . '/class-agent-setting-factory.php';
 		require_once __DIR__ . '/class-agent-utils.php';
 	}
 
