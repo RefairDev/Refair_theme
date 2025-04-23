@@ -62,7 +62,10 @@ function get_deposit_meta( $key, $default_value ) {
 	?>
 
 	<?php
-	$attachments    = maybe_unserialize( $all_metas['galery']['0'] );
+	$attachments = maybe_unserialize( $all_metas['galery']['0'] );
+	if ( ! is_array( $attachments ) ) {
+		$attachments = array();
+	}
 	$gallery_length = count( $attachments );
 	$slides         = array();
 	$anchors        = array();
