@@ -552,40 +552,6 @@ if ( ! function_exists( 'pages_metas_setup' ) ) :
 			)
 		);
 
-		$sites_page_metas->create(
-			new Agent_Meta_Parameters(
-				'extensible',
-				'pois',
-				"Points d'intérêts",
-				array(
-					'meta' => new Agent_Meta_Parameters(
-						'group',
-						'poi',
-						"point d'intérêt",
-						array(
-							'metas' => array(
-								new Agent_Meta_Parameters(
-									'text',
-									'name',
-									'Nom'
-								),
-								new Agent_Meta_Parameters(
-									'locmap',
-									'localisation_map',
-									'Localisation sur carte'
-								),
-								new Agent_Meta_Parameters(
-									'localisation',
-									'localisation',
-									'Localisation'
-								),
-							),
-						)
-					),
-				)
-			)
-		);
-
 		$providers_page_metas->create(
 			new Agent_Meta_Parameters(
 				'editor',
