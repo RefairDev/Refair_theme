@@ -193,6 +193,13 @@ class Locmap_Meta_View extends Meta_View {
 	 * @return string view with current meta view content added.
 	 */
 	public function get_view( $view_content, $data, $value = null ) {
+		if ( null === $value || '' === $value || ! is_array( $value ) ) {
+			$value = array(
+				'location' => '',
+				'lat'      => '',
+				'lng'      => '',
+			);
+		}
 		ob_start();
 		?>
 		<p>
