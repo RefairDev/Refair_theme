@@ -905,7 +905,9 @@ class Filters extends React.Component {
         if ( null !== this.state.currentFilters['cat'] ){ currentCategoryValue = this.state.currentFilters['cat'].map(elt => optionsCats.filter(opt => elt === opt.value))[0];}
 
         let currentDepositValue = null;
-        if ( null !== this.state.currentFilters['deposit'] ){ currentDepositValue = this.state.currentFilters['deposit'].map(elt => optionsDeposits.filter(opt => elt === opt.value))[0];}
+        if ( null !== this.state.currentFilters['deposit'] && this.state.currentFilters['deposit'].length > 0 && ! ( this.state.currentFilters['deposit'].length === 1 && 0 === this.state.currentFilters['deposit'][0] ) ){ 
+            currentDepositValue = this.state.currentFilters['deposit'].map(elt => optionsDeposits.filter(opt => elt === opt.value)[0]);
+        }
 
         let currentDeposit_typeValue = null;
         if ( null !== this.state.currentFilters['deposit_type'] ){ currentDeposit_typeValue = this.state.currentFilters['deposit_type'].map(elt => optionsDeposit_types.filter(opt => elt === opt.value))[0];}
