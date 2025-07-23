@@ -1,7 +1,7 @@
 'use strict';
 import React, { useState, useEffect } from 'react';
 import ReactDom, { render } from 'react-dom';
-import { useMapEvent, MapContainer, TileLayer, Marker, useMap, FeatureGroup, Polygon } from 'react-leaflet';
+import { useMapEvent, MapContainer, TileLayer, Marker, useMap, FeatureGroup, Polygon, Rectangle } from 'react-leaflet';
 // import MarkerClusterGrp from "./markerClusterGroup.jsx";
 import eventBus from "./eventBus.jsx";
 import 'leaflet/dist/leaflet.css';
@@ -32,14 +32,23 @@ export const UnclickComponent = ({unclick}) => {
 
   };
 
+export const MapBounds = ({bounds}) => {
+    const map = useMap();
+    const [inBounds, setBounds] = useState([])
+  
+    if (bounds != inBounds && bounds.length > 0) {
+        setBounds(bounds);
+        map.fitBounds(bounds);
+    }
+    return null;
+
+  };
 
 class DepositsMap extends React.Component {
 
     constructor(props) {
         super(props);
-        let cityList = JSON.parse(geojson.iris);
-        let citiesOutlines = JSON.parse(geojson.outlines);
-        this.state = { "deposits": [], "isNewDeposits": false, cities: cityList, outlines: citiesOutlines, highlightedMarker: React.createRef() };
+        this.state = { "deposits": [], "isNewDeposits": false, cities: [], citiesBounds: [], highlightedMarker: React.createRef() };
 
         this.highlightDeposit = this.highlightDeposit.bind(this);
         this.hightlightMarker = this.hightlightMarker.bind(this);
@@ -50,11 +59,12 @@ class DepositsMap extends React.Component {
 
     componentDidMount() {
         this.fetchDeposits();
+        this.fetchCities();
         eventBus.on("mapResize", this.updateMap);
         //eventBus.on("depositsUpdate", this.updateDeposits);
     }
 
-    componentDidUpdate() {
+    componentDidUpdate ( ) {
 
     }
 
@@ -89,6 +99,39 @@ class DepositsMap extends React.Component {
 
     updateDeposits(deposits){
         this.setState( {"deposits": deposits });
+    }
+
+    fetchCities() {
+        let url = admin_objects.rest_url + 'city/?per_page=100&_fields=id,slug,meta,count,name';
+
+         fetch(url)
+            .then(response => response.json())
+            .then(myJSON => {
+                let newState = this.state;
+                myJSON.forEach((elt, idx) => {
+                    newState.cities.push(elt);
+                    /* get bounds of current cities using a polygon */
+                    let LPolygon = null; 
+                    try{
+                        LPolygon = L.polygon(JSON.parse(elt.meta.geometry));
+                    } catch (e) {
+                        console.error("Error creating polygon for city:", elt.name, e);
+                        return;
+                    }
+                    /* Retrieve latLngBounds from citiesBounds */
+                    let allBounds = [];
+                    if ( Array.isArray( newState.citiesBounds ) && 2 == newState.citiesBounds.length ){
+                        allBounds = L.latLngBounds(newState.citiesBounds[0], newState.citiesBounds[1]);
+                        allBounds.extend(LPolygon.getBounds());
+                    }else{
+                        allBounds = LPolygon.getBounds();
+                    }
+                    newState.citiesBounds = [allBounds.getSouthWest(), allBounds.getNorthEast()];
+                    
+
+                });
+                this.setState(newState);
+            });
     }
 
     getProviderReference() {
@@ -126,32 +169,11 @@ class DepositsMap extends React.Component {
         this.setState({ 'sideBarState': sideBarState });
     }
 
+
     render() {
-        const position = [44.838410, -0.598461];
-        let centroidsPoints = [];
-        let irisPolygons = [];
-        this.state.deposits.forEach(elt => {
+        let position = [basemap.mapcenter.lat, basemap.mapcenter.lng];
 
-            let inIris = [];
-            inIris = this.state.cities.filter(city => (city.CODE_IRIS.includes(elt.iris)) ? true : false);
-
-            if ( 0 < inIris.length){
-
-                let centroidIdx = centroidsPoints.findIndex((elt => elt.location.NOM_COM === inIris[0].NOM_COM))
-    
-                if (centroidIdx > -1) {
-                    centroidsPoints[centroidIdx].count++;
-                } else {
-                    if ( elt.city.length > 0 ){
-                        centroidsPoints.push({ 'location': inIris[0], 'count': 1, 'id': elt.city[0] });
-                    }else{
-                        centroidsPoints.push({ 'location': inIris[0], 'count': 1, 'id': inIris[0].NOM_COM });
-                    }
-                }
-            }
-        });
-
-        let markers = centroidsPoints.map((pt, idx) => {
+        let markers = this.state.cities.map((pt, idx) => {
 
             let cmpMarker = (<></>);
             let iconArgs = {
@@ -167,7 +189,8 @@ class DepositsMap extends React.Component {
 
             
             
-            let polygonPoints = this.state.outlines[pt['location']['NOM_COM']]['coords'];
+            let polygonPoints = JSON.parse( pt['meta']['geometry'] );
+            let centroidPoint = JSON.parse( pt['meta']['centroid'] );
             let pathOptions = { 
                 'stroke': true,
                 'color': geojson.styles.default.stroke,
@@ -198,7 +221,7 @@ class DepositsMap extends React.Component {
                 }}>
                     <Marker
                         key={pt.id+'-m'}
-                        position={this.state.outlines[pt['location']['NOM_COM']]['center']}
+                        position={centroidPoint}
                         icon={markerIcon}
 
                     />
@@ -213,11 +236,12 @@ class DepositsMap extends React.Component {
                     <FeatureGroup key={pt.id} eventHandlers={{
                         click: () =>{ this.highlightDeposit(pt.id);},
                     }}>
-                        <Marker
-                            position={this.state.outlines[pt['location']['NOM_COM']]['center']}
+                        <Marker 
+                            key={pt.id+'-m'}
+                            position={centroidPoint}
                             icon={markerIcon}
                         />
-                        <Polygon pathOptions={pathOptions} positions={polygonPoints} />
+                        <Polygon key={pt.id+'-pl'} pathOptions={pathOptions} positions={polygonPoints} />
 
                     </FeatureGroup>
                 );
@@ -229,15 +253,16 @@ class DepositsMap extends React.Component {
             return cmpMarker;
 
         });
-        return <MapContainer center={position} zoom={12} minZoom={11} maxZoom={14} scrollWheelZoom={true} maxBounds={[[44.71212365, -0.90881398], [45.04816398, -0.44274442]]}>
+        return <MapContainer center={position} zoom={12} maxZoom={14} scrollWheelZoom={true} bounds={this.state.citiesBounds}>
             <MapController />
             <UnclickComponent unclick={this.unclick} />
             <TileLayer
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                url={map.url + "/{z}/{x}/{y}.png"}
+                url={basemap.url + "/{z}/{x}/{y}.png"}
             />
             {markers.length > 0 && markers}
             <MapUpdater currentOpening={this.state.sideBarState} />
+            <MapBounds bounds={this.state.citiesBounds} />
         </MapContainer>
 
     }

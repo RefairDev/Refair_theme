@@ -258,6 +258,7 @@ class Deposits extends React.Component {
             'location': rawProduct["location"],
             'city': rawProduct["city"],
             'iris': rawProduct["iris"],
+            'insee_code': rawProduct["insee_code"],
             "link": rawProduct['link'],
             "qty": rawProduct['materials'],
             "type": depositType,
