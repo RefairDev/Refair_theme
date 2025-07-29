@@ -200,8 +200,9 @@ class Deposits extends React.Component {
 
         fetch(url)
             .then(response => {
-                if (parseInt(response.headers.get("X-WP-TotalPages") > pageFetched)) {
-                    fetchDepositsTypes(++pageFetched);
+                let totalPages = parseInt(response.headers.get("x-wp-totalpages"))
+                if ( totalPages > pageFetched) {
+                    this.fetchDepositsTypes(++pageFetched);
                 }
                 return response.json();
             })
