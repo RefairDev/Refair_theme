@@ -196,7 +196,11 @@ class Deposits extends React.Component {
     }
 
     fetchDepositsTypes(pageFetched = 1) {
-        let url = admin_objects.rest_url + 'deposit_type';
+        let url = admin_objects.rest_url + 'deposit_type?per_page=100';
+
+        if ( pageFetched > 1 ){
+            url = url + '&page=' + pageFetched;
+        }
 
         fetch(url)
             .then(response => {
