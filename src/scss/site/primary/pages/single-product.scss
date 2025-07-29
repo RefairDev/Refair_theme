@@ -174,10 +174,12 @@
 
                 .left-3-wrapper{
                     display: grid;
-                    grid-template-rows: 30% 70%;
+                    grid-template-rows: 20% 20% 60%;
                     height:100%;
+                    .deposit,
                     .location{
                         display:flex;
+                        padding: 0.25rem 0 0.75rem;
                         span{
                             align-self: center;                            
                         }
