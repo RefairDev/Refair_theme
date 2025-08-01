@@ -714,9 +714,14 @@ class Agent {
 				$deposit['availability'] = $inv_av;
 			}
 
-			$inv_iris = get_post_meta( $inv_post->ID, 'iris', true );
-			if ( false !== $inv_iris && '' !== $inv_iris ) {
-				$deposit['iris'] = $inv_iris;
+			// $inv_iris = get_post_meta( $inv_post->ID, 'iris', true );
+			// if ( false !== $inv_iris && '' !== $inv_iris ) {
+			// 	$deposit['iris'] = $inv_iris;
+			// }
+
+			$inv_insee_code = get_post_meta( $inv_post->ID, 'insee_code', true );
+			if ( false !== $inv_insee_code && '' !== $inv_insee_code ) {
+				$deposit['insee_code'] = $inv_insee_code;
 			}
 		}
 		return $deposit;
@@ -1409,6 +1414,9 @@ class Agent {
 							break;
 						case 'editor':
 							$setting_obj = new Editor_Setting( $setting['name'], $setting['description'], $setting['options'] );
+							break;
+						case 'latlng':
+							$setting_obj = new Latlng_Setting( $setting['name'], $setting['description'], $setting['options'] );
 							break;
 					}
 					if ( isset( $setting_obj ) ) {

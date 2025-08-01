@@ -84,6 +84,12 @@ if ( ! function_exists( 'theme_settings' ) ) :
 				'type'        => 'editor',
 				'default'     => '',
 			),
+			array(
+				'name'        => 'Centre de carte',
+				'description' => '(par défaut)',
+				'type'        => 'latlng',
+				'default'     => '',
+			),
 		);
 
 		$global_settings = array_merge( $default_settings, $theme_settings );

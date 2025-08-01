@@ -65,14 +65,10 @@ $agent->set_script_properties(
 	$script_properties
 );
 
-$json         = file_get_contents( get_template_directory() . '/geojson/IRIS_COM_centroids.json' );
-$outline_json = file_get_contents( get_template_directory() . '/geojson/Outline_COM.json' );
 $agent->set_script_properties(
 	'bundle-public',
 	'geojson',
 	array(
-		'iris'     => $json,
-		'outlines' => $outline_json,
 		'styles'   => array(
 			'default'   => array(
 				'stroke'       => '#205c66',
@@ -89,13 +85,17 @@ $agent->set_script_properties(
 		),
 	)
 );
-$map_url = WP_CONTENT_URL . '/uploads/carte_BM_refair';
+$map_url = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all';
 
 $agent->set_script_properties(
 	'bundle-public',
-	'map',
+	'basemap',
 	array(
 		'url' => $map_url,
+		'mapcenter' => array(
+			'lat' => get_theme_mod('centredecarte-lat'), // Default latitude for Paris.
+			'lng' => get_theme_mod('centredecarte-lng'),  // Default longitude for Paris.
+		),
 	)
 );
 
