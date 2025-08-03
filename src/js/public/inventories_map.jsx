@@ -109,25 +109,27 @@ class DepositsMap extends React.Component {
             .then(myJSON => {
                 let newState = this.state;
                 myJSON.forEach((elt, idx) => {
-                    newState.cities.push(elt);
-                    /* get bounds of current cities using a polygon */
-                    let LPolygon = null; 
-                    try{
-                        LPolygon = L.polygon(JSON.parse(elt.meta.geometry));
-                    } catch (e) {
-                        console.error("Error creating polygon for city:", elt.name, e);
-                        return;
+
+                    if (elt.count >0){
+                        newState.cities.push(elt);
+                        /* get bounds of current cities using a polygon */
+                        let LPolygon = null; 
+                        try{
+                            LPolygon = L.polygon(JSON.parse(elt.meta.geometry));
+                        } catch (e) {
+                            console.error("Error creating polygon for city:", elt.name, e);
+                            return;
+                        }
+                        /* Retrieve latLngBounds from citiesBounds */
+                        let allBounds = [];
+                        if ( Array.isArray( newState.citiesBounds ) && 2 == newState.citiesBounds.length ){
+                            allBounds = L.latLngBounds(newState.citiesBounds[0], newState.citiesBounds[1]);
+                            allBounds.extend(LPolygon.getBounds());
+                        }else{
+                            allBounds = LPolygon.getBounds();
+                        }
+                        newState.citiesBounds = [allBounds.getSouthWest(), allBounds.getNorthEast()];
                     }
-                    /* Retrieve latLngBounds from citiesBounds */
-                    let allBounds = [];
-                    if ( Array.isArray( newState.citiesBounds ) && 2 == newState.citiesBounds.length ){
-                        allBounds = L.latLngBounds(newState.citiesBounds[0], newState.citiesBounds[1]);
-                        allBounds.extend(LPolygon.getBounds());
-                    }else{
-                        allBounds = LPolygon.getBounds();
-                    }
-                    newState.citiesBounds = [allBounds.getSouthWest(), allBounds.getNorthEast()];
-                    
 
                 });
                 this.setState(newState);
