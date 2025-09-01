@@ -2,7 +2,7 @@
 
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price' );
-
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
@@ -16,6 +16,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
  *
  * @return void
  */
+
 function refair_template_back_button() {
 	$referer = '';
 	if ( array_key_exists( 'HTTP_REFERER', $_SERVER ) && '' !== $_SERVER['HTTP_REFERER'] ) {
@@ -33,6 +34,20 @@ function refair_template_back_button() {
 }
 
 add_action( 'woocommerce_before_single_product', 'refair_template_back_button', 9 );
+
+/**
+ * Display Title with sku if any.
+ */
+
+function refair_template_single_title() {
+	global $product;
+	$sku = $product->get_sku();
+	?>
+	<h1 class="product_title entry-title"><?php echo esc_html( $product->get_name() ); ?><?php if ( '' !== $sku && false !== $sku ) { ?><small><?php echo ' (' . esc_html( $sku ) . ')'; ?></small><?php } ?></h1>
+	<?php
+}
+add_action( 'woocommerce_single_product_summary', 'refair_template_single_title', 5 );
+
 
 /**
  * Display Categories

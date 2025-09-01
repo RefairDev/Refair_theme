@@ -359,6 +359,7 @@ class Material extends React.Component {
         let deposit_loc = details.deposit['location']?details.deposit['location']:"-";
         let deposit_ref = details.deposit['reference']?details.deposit['reference']:"-";
         let deposit_name = details.deposit['name']?details.deposit['name']:"-";
+        let material_sku = details.sku? '(' + details.sku + ')' :"( - )";
 
         let deposit_heading = (<>{deposit_name + ' '}<small>{'('+ deposit_ref + ')'}</small></>);
         let dimensions = undefined;
@@ -420,7 +421,7 @@ class Material extends React.Component {
             <article className={cardClasses}>
                 <div className="deposit-heading">{deposit_heading}</div>
                 <div className="family">{family}</div>
-                <h3 className="designation">{details.title}</h3>
+                <h3 className="designation">{details.title}<small>{material_sku}</small></h3>
                 <div className="cat">{category}</div>        
                 <div className="lower-part">
                     <div className="condition-deposit part-block case-1-1">

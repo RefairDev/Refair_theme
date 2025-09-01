@@ -1135,6 +1135,11 @@ span + i.icono-arrow-left{
 		font-size: 1.3rem;
 		margin: 0 0;
 		vertical-align:middle;
+		small{
+			display: block;
+			margin-right: 0.5rem;
+			font-size: 50%;
+		}
 	}
 
 	.family,.deposit, .condition{
