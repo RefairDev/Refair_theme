@@ -2,7 +2,7 @@
 
 remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price' );
-
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
@@ -16,6 +16,7 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
  *
  * @return void
  */
+
 function refair_template_back_button() {
 	$referer = '';
 	if ( array_key_exists( 'HTTP_REFERER', $_SERVER ) && '' !== $_SERVER['HTTP_REFERER'] ) {
@@ -33,6 +34,20 @@ function refair_template_back_button() {
 }
 
 add_action( 'woocommerce_before_single_product', 'refair_template_back_button', 9 );
+
+/**
+ * Display Title with sku if any.
+ */
+
+function refair_template_single_title() {
+	global $product;
+	$sku = $product->get_sku();
+	?>
+	<h1 class="product_title entry-title"><?php echo esc_html( $product->get_name() ); ?><?php if ( '' !== $sku && false !== $sku ) { ?><small><?php echo ' (' . esc_html( $sku ) . ')'; ?></small><?php } ?></h1>
+	<?php
+}
+add_action( 'woocommerce_single_product_summary', 'refair_template_single_title', 5 );
+
 
 /**
  * Display Categories
@@ -83,7 +98,7 @@ function refair_template_single_product_left_2() {
 		$rq = 'Aucune';
 	}
 	?>
-	<div class="left-2-wrapper"><h2><?php esc_html_e( 'Comments', 'refair-theme' ); ?></h2><div><?php echo wp_kses_post( wpautop( $rq ) ); ?></div></div>
+	<div class="left-2-wrapper"><h2 class="left-2-heading"><?php esc_html_e( 'Comments', 'refair-theme' ); ?></h2><div class="left-2-body"><?php echo wp_kses_post( wpautop( $rq ) ); ?></div></div>
 	<?php
 }
 add_action( 'woocommerce_single_product_sub-summary_left_2', 'refair_template_single_product_left_2', 10 );
@@ -113,6 +128,8 @@ function refair_template_single_product_summary_left_3() {
 		preg_match_all( $re, $loc['location'], $matches, PREG_SET_ORDER, 0 );
 		$location_city = $matches[0][1];
 
+		$deposit = $posts[0]->post_title . ' (' . $deposit_ref . ')';
+
 		$av = get_post_meta( $posts[0]->ID, 'dismantle_date', true );
 		if ( false !== $av ) {
 			$re     = '/^([0-9]{4})-([0-9]{2})-[0-9]{2}$/';
@@ -128,11 +145,14 @@ function refair_template_single_product_summary_left_3() {
 
 	?>
 	<div  class="left-3-wrapper">
+		<div class="deposit">
+			<span><?php echo esc_html( $deposit ); ?></span>			
+		</div>
 		<div class="location">
-			<span><?php esc_html_e( $location_city ); ?></span>
+			<span><?php echo esc_html( $location_city ); ?></span>
 		</div>
 		<div class="availability">
-			<span><?php esc_html_e( $av_str ); ?></span>
+			<span><?php echo esc_html( $av_str ); ?></span>
 		</div>
 	</div>
 	<?php
