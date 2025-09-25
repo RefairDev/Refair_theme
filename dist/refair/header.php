@@ -44,7 +44,7 @@
 							</a>
 						</div>
 						<div class="deposit-access">
-							<a href='<?php the_permalink( get_theme_mod( 'pagedegisement', get_the_ID() ) ); ?>'>
+							<a href='<?php the_permalink( get_theme_mod( 'pagedessites', get_the_ID() ) ); ?>'>
 								<img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/images/deposit_.svg' ); ?>">
 								<span>Les<br>sites</span>
 							</a>
