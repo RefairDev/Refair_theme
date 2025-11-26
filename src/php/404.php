@@ -30,8 +30,8 @@ get_header();
 						<div class="column b-top-green-400">
 						<div class="widget">
 							<h2 class="widget-title"><?php esc_html_e( 'Desposits and materials', 'refair-theme' ); ?></h2>
-							<p><?php wp_kses_post( __( 'All deposits', 'refair-theme' ) ); ?> <a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'pagedegisement' ) ) ); ?>"><?php wp_kses_post( __( 'Here', 'refair-theme' ) ); ?></a></p>
-							<h3> <?php wp_kses_post( __( 'Lastest Deposits', 'refair-theme' ) ); ?>:</h3>
+							<p><?php echo wp_kses_post( __( 'All deposits', 'refair-theme' ) ); ?> <a href="<?php echo esc_url( get_the_permalink( get_theme_mod( 'pagedegisement' ) ) ); ?>"><?php echo wp_kses_post( __( 'Here', 'refair-theme' ) ); ?></a></p>
+							<h3> <?php echo wp_kses_post( __( 'Lastest Deposits', 'refair-theme' ) ); ?>:</h3>
 								<ul>
 									<?php
 									$args = array(
