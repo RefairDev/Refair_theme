@@ -49,6 +49,8 @@ class DepositsMap extends React.Component {
     constructor(props) {
         super(props);
         this.state = { "deposits": [], "isNewDeposits": false, cities: [], citiesBounds: [], highlightedMarker: React.createRef() };
+        this.clickTimer = null;
+        this.clickDelay = 300;
 
         this.highlightDeposit = this.highlightDeposit.bind(this);
         this.hightlightMarker = this.hightlightMarker.bind(this);
@@ -146,11 +148,25 @@ class DepositsMap extends React.Component {
     }
 
     highlightDeposit(id) {
-        eventBus.dispatch("depositHighLight", id);
-        this.setState({ markerHighlight: id, highlightedMarker: React.createRef() });
+        // Clear any existing timer to prevent double-click issues
+        if (this.clickTimer) {
+            clearTimeout(this.clickTimer);
+        }
+        
+        // Set a timer to execute the highlight after a short delay
+        this.clickTimer = setTimeout(() => {
+            eventBus.dispatch("depositHighLight", id);
+            this.setState({ markerHighlight: id, highlightedMarker: React.createRef() });
+            this.clickTimer = null;
+        }, this.clickDelay);
     }
 
     unclick(){
+        // Clear any pending highlight timer
+        if (this.clickTimer) {
+            clearTimeout(this.clickTimer);
+            this.clickTimer = null;
+        }
         eventBus.dispatch("depositHighLight", null);
         this.setState({ markerHighlight: 0, highlightedMarker: React.createRef() });
     }
