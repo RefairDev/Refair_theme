@@ -144,7 +144,7 @@ class Term_Meta {
 		?>
 		<?php wp_nonce_field( basename( __FILE__ ), '<?php echo $this->name;?>_nonce' ); ?>
 		<div class="form-field <?php echo $this->name; ?>-wrap">
-			<label for="<?php echo esc_attr( $this->name ); ?>"><?php wp_kses_post( $this->description ); ?></label>
+			<label for="<?php echo esc_attr( $this->name ); ?>"><?php echo wp_kses_post( $this->description ); ?></label>
 			<input type="text" name="<?php echo esc_attr( $this->name ); ?>" id="<?php echo esc_attr( $this->name ); ?>" value="" class="<?php echo esc_attr( $this->name ); ?>-field" />
 		</div>
 		<?php
