@@ -114,6 +114,7 @@ function refair_template_single_product_summary_left_3() {
 	$matches       = array();
 	$location_city = '-';
 	$av_str        = '-';
+	$deposit        = '-';
 	$deposit_ref   = get_post_meta( $product->get_id(), 'deposit', true );
 	$posts         = get_posts(
 		array(
