@@ -179,10 +179,9 @@ if ( array_key_exists( 'logo_bdr', $all_metas ) ) {
 							<?php
 							echo wp_kses_post( $block_item['block_item_text'] );
 							?>
-						</div>							
+					</div>							
 					</div>
 					<?php
-					echo wp_kses_post( $block['block_text'] );
 				}
 				?>
 			</div>

@@ -599,7 +599,7 @@ class Agent {
 				$dimensions = array( 'Tailles Divers' );
 			}
 		} else {
-			$conditions[] = get_post_meta( $product->id, 'condition', true );
+			$conditions[] = get_post_meta( $product->get_id(), 'condition', true );
 			if ( ! empty( $product->get_length() ) ) {
 				$dimensions[] = 'L' . $product->get_length();}
 			if ( ! empty( $product->get_width() ) ) {
@@ -624,7 +624,7 @@ class Agent {
 			'stock_status'     => $product->get_stock_status(),
 			'variations'       => $product->get_children(),
 			'attributes'       => $this->extract_attributes( $product ),
-			'cats'             => $product->get_categories(),
+			'cats'             => wc_get_product_category_list( $product->get_id() ),
 			'featured_img'     => $src,
 			'gallery_ids'      => $product->get_gallery_image_ids(),
 			'add_to_cart_link' => $product->add_to_cart_url(),
@@ -696,7 +696,8 @@ class Agent {
 				'meta_value' => $inv_ref,
 			)
 		);
-		if ( false !== $inv_posts && 0 !== $inv_posts ) {
+		$deposit = array();
+		if ( ! empty( $inv_posts ) && isset( $inv_posts[0] ) && property_exists( $inv_posts[0], 'ID' ) ) {
 
 			$inv_post        = $inv_posts[0];
 			$deposit['name'] = $inv_post->post_title;
