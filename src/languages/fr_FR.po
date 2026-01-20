@@ -278,9 +278,9 @@ msgstr ""
 msgid "news"
 msgstr "actualités"
 
-#: woocommerce/cart/cart-empty.php:35
+#: woocommerce/cart/cart-empty.php:35 woocommerce/hooks.php:157
 msgid "Return to deposits"
-msgstr "Retour au sites d'invetaires"
+msgstr "Retour aux sites d'inventaires"
 
 #: woocommerce/cart/cart.php:30 woocommerce/cart/cart.php:85
 #: woocommerce/emails/email-order-details.php:42
@@ -836,3 +836,7 @@ msgstr "Actions"
 
 #~ msgid "Pay"
 #~ msgstr "Enre"
+
+#: woocommerce/hooks.php:161
+msgid "Your list is currently empty."
+msgstr "Votre liste est actuellement vide."

@@ -152,12 +152,12 @@ function custom_add_to_cart_handler() {
 
 
 function refair_return_to_deposit_redirect_text() {
-	return 'Return to deposits';
+	return __( 'Return to deposits', 'refair-theme' );
 }
 add_filter( 'woocommerce_return_to_shop_text', 'refair_return_to_deposit_redirect_text' );
 
 function refair_empty_cart_message() {
-	return 'Your list is currently empty.';
+	return __( 'Your list is currently empty.', 'refair-theme' );
 }
 add_filter( 'wc_empty_cart_message', 'refair_empty_cart_message' );
 

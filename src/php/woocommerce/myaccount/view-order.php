@@ -12,9 +12,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see     https://docs.woocommerce.com/document/template-structure/
+ * @see     https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.0.0
+ * @version 10.1.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -23,17 +23,33 @@ $notes = $order->get_customer_order_notes();
 ?>
 <p>
 <?php
-printf(
-	/* translators: 1: order number 2: order date 3: order status */
-	esc_html__( 'List #%1$s created the %2$s and is currently %3$s.', 'refair-theme' ),
-	'<mark class="order-number">' . $order->get_order_number() . '</mark>', // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	'<mark class="order-date">' . wc_format_datetime( $order->get_date_created() ) . '</mark>', // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	'<mark class="order-status">' . wc_get_order_status_name( $order->get_status() ) . '</mark>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+echo wp_kses_post(
+	/**
+	 * Filter to modify order details status text.
+	 *
+	 * @param string $order_status The order status text.
+	 *
+	 * @since 10.1.0
+	 */
+	apply_filters(
+		'woocommerce_order_details_status',
+		sprintf(
+			/* translators: 1: order number 2: order date 3: order status */
+			// REFAIR CUSTOM: "List" instead of "Order"
+			esc_html__( 'List #%1$s created the %2$s and is currently %3$s.', 'refair-theme' ),
+			'<mark class="order-number">' . $order->get_order_number() . '</mark>', // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			'<mark class="order-date">' . wc_format_datetime( $order->get_date_created() ) . '</mark>', // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			'<mark class="order-status">' . wc_get_order_status_name( $order->get_status() ) . '</mark>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		),
+		$order
+	)
 );
+
 ?>
 </p>
 
 <?php if ( $notes ) : ?>
+	<!-- REFAIR CUSTOM: "News of the list" instead of "Order updates" -->
 	<h2><?php esc_html_e( 'News of the list', 'refair-theme' ); ?></h2>
 	<ol class="woocommerce-OrderUpdates commentlist notes">
 		<?php foreach ( $notes as $note ) : ?>

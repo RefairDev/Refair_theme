@@ -1,3 +1,6 @@
 node_modules/
 /gulpfile.js
 /package-lock.json
+gitlab_ed25519_key
+*.pub
+gitlab_rsa_key
